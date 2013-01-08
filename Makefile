@@ -1,16 +1,13 @@
-all: view
+all: build/mazurov-thesis.pdf
 
-build/mazurov-thesis.pdf: mazurov-thesis.rst
+build/mazurov-thesis.pdf: mazurov-thesis.tex
 	test -d build || mkdir build
-	bin/thesis2latex.py mazurov-thesis.rst build/mazurov-thesis.tex || exit
-	# rst2latex mazurov-thesis.rst build/mazurov-thesis.tex || exit
-	cd build && pdflatex mazurov-thesis  || exit
+	chktex mazurov-thesis.tex || exit
+	cd build && rubber -d -s ../mazurov-thesis.tex || exit
+	evince build/mazurov-thesis.pdf&
 
-view: build/mazurov-thesis.pdf
-	evince build/mazurov-thesis.pdf &
-
-regen:
-	cd build && pdflatex mazurov-thesis  || exit
+view: mazurov-thesis.pdf
+	evince mazurov-thesis.pdf &
 
 clean:
 	rm -rf build
