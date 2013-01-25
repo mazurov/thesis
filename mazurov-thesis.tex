@@ -1,9 +1,11 @@
-\documentclass[12pt, a4paper]{article}
+\documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{lineno}
-\usepackage{graphicx}
+\usepackage[pdftex]{graphicx}
 \usepackage{float}
+\usepackage{lineno}
 \usepackage{hyperref}
+\usepackage{xr}
 \hypersetup{
   colorlinks = true,
   urlcolor = blue,
@@ -13,8 +15,7 @@
   pdfsubject = {Thesis},
   pdfpagemode = UseNone
 }
-
-\usepackage{lineno}
+% =============================================================================
 
 % Customize page headers
 \usepackage{fancyhdr}
@@ -24,46 +25,32 @@
 \fancyhead[C]{Version 0.1}
 \fancyhead[R]{changelog}
 \renewcommand{\headrulewidth}{0.4pt}
-\fancyfoot[L]{}
-\fancyfoot[C]{\thepage}
-\fancyfoot[R]{}
+\fancyfoot[L]{\href{https://github.com/mazurov/thesis}{https://github.com/mazurov/thesis}}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
 \renewcommand{\footrulewidth}{0.4pt}
-
-
+% =============================================================================
 \linenumbers{}
+% =============================================================================
+% =============================================================================
+\begin{document}\thispagestyle{fancyplain}
 \title{High Level Trigger software performance profiling and $\chi_{b}$ production study}
 \author{Alexander Mazurov}
 \date{\today}
-
-\begin{document}\thispagestyle{fancyplain}
 \maketitle
-\section*{Abstract}
+\begin{abstract}
+\addcontentsline{toc}{section}{\numberline{}Abstract}
+Test
+\end{abstract}
 
-\tableofcontents
+% \tableofcontents
+
+
 \section{Introduction}
 
 \section{Review of production mechanism and experimental status}
 
-\section{The LHCb experiment}
-
-\subsection{The LHC}
-
-\subsection{The LHCb}
-
-\subsection{Tracking system}
-\subsubsection{Vertex Locater}
-\subsubsection{Magnet}
-\subsubsection{Inner tracker}
-\subsubsection{Outer tracker}
-
-\subsection{Particle identification}
-\subsubsection{RICH system}
-\subsubsection{Muon system}
-\subsubsection{Calorimeter system}
-
-\subsection{Trigger}
-\subsubsection{L0 trigger}
-\subsubsection{High level trigger}
+\include{chapter3/lhcb}
 
 \subsection{Software}
 \subsubsection{Core software}
@@ -89,31 +76,23 @@
 \subsection{Results}
 \subsection{Conclusions}
 
-\section{$\chi_{b}$ production study}
+\section{Study of $\chi_{b}$ production}
 \subsection{Introduction}
 \subsection{Datasets used}
 \subsubsection{Data}
 \subsubsection{Simulated event samples}
-\subsection{Selections}
-\subsubsection{$\Upsilon$ selection}
-\subsubsection{$\chi_{b} \rightarrow \Upsilon \gamma$ selection}
-\subsection{Monte-Carlo study on $\chi_b$ cross section measurement}
-\subsection{Systematic uncertainties}
-\subsection{Comparison to theory}
-\subsection{Results}
-\subsection{Conclusions}
+\subsection{$\Upsilon$ selection}
 
+\subsection{$\chi_{b} \rightarrow \Upsilon \gamma$ selection}
+\subsubsection{Fitting}
+\subsubsection{Optimization}
+\subsubsection{Number of $\chi_{b}$ candidates as function of $p_{T} (\Upsilon)$}
 
-\section{Measurement of $\chi_{b}(3P)$ mass}
-\subsection{Introduction}
-\subsection{Optimization}
-\subsection{Systematic uncertainties}
-\subsection{Results}
-
-\subsection{Conclusions}
-\section{Results}
+\subsection{Measurement of $\chi_{b} (3P)$ mass}
+\section{Systematic uncertainties}
 \section{Conclusions}
-\section{Acknowledgements}
+
+\section*{Acknowledgements}
 
 \end{document}
 

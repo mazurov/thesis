@@ -1,10 +1,8 @@
-all: build/mazurov-thesis.pdf
-
-build/mazurov-thesis.pdf: mazurov-thesis.tex
+all:
 	test -d build || mkdir build
 	chktex mazurov-thesis.tex || exit
-	cd build && rubber -d -s ../mazurov-thesis.tex || exit
-	evince build/mazurov-thesis.pdf&
+	latexmk -jobname=build/mazurov-thesis -pdf mazurov-thesis
+
 
 view: mazurov-thesis.pdf
 	evince mazurov-thesis.pdf &
