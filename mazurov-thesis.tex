@@ -1,11 +1,23 @@
-\documentclass[12pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{lineno}
-\usepackage[pdftex]{graphicx}
-\usepackage{float}
-\usepackage{lineno}
-\usepackage{hyperref}
-\usepackage{xr}
+\documentclass[12pt,a4paper]{report}
+
+% For two column text, add "twocolumn" as an option to the document
+% class. Also uncomment the two "onecolumn" and "twocolumn" lines
+% around the title page below.
+
+% Variables that controls behaviour
+\usepackage{ifthen} % for conditional statements
+\newboolean{pdflatex}
+\setboolean{pdflatex}{true} % False for eps figures 
+
+\newboolean{articletitles}
+\setboolean{articletitles}{true} % False removes titles in references
+
+\newboolean{uprightparticles}
+\setboolean{uprightparticles}{false} %True for upright particle symbols
+
+\input{preamble}
+\usepackage{longtable} % only for template; not usually to be used in PAPERs
+
 \hypersetup{
   colorlinks = true,
   urlcolor = blue,
@@ -16,39 +28,63 @@
   pdfpagemode = UseNone
 }
 % =============================================================================
-
 % Customize page headers
 \usepackage{fancyhdr}
 \pagestyle{fancyplain}
-\fancyhf{}
-\fancyhead[L]{\today}
-\fancyhead[C]{Version 0.1}
-\fancyhead[R]{changelog}
-\renewcommand{\headrulewidth}{0.4pt}
-\fancyfoot[L]{\href{https://github.com/mazurov/thesis}{https://github.com/mazurov/thesis}}
-\fancyfoot[C]{}
-\fancyfoot[R]{\thepage}
-\renewcommand{\footrulewidth}{0.4pt}
-% =============================================================================
-\linenumbers{}
-% =============================================================================
-% =============================================================================
-\begin{document}\thispagestyle{fancyplain}
-\title{High Level Trigger software performance profiling and $\chi_{b}$ production study}
-\author{Alexander Mazurov}
-\date{\today}
-\maketitle
-\begin{abstract}
-\addcontentsline{toc}{section}{\numberline{}Abstract}
-Test
-\end{abstract}
+
+% \renewcommand{\headrulewidth}{0.4pt}
+% \fancyfoot[L]{\today}
+% \fancyfoot[C]{Version 0.1}
+% \fancyfoot[R]{\thepage}
+% \renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Title     %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setcounter{footnote}{1}
+
+% %%%%%%% CHOOSE TITLE PAGE--------
+\input{title}
+
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\setcounter{footnote}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Table of Content   %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Uncomment next 2 lines if desired
+%\tableofcontents
+%\cleardoublepage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Main text %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \pagestyle{plain} % restore page numbers for the main text
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+%% Uncomment during review phase. 
+%% Comment before a final submission.
+\linenumbers
+
+% You can include short sections directly in the main tex file.
+% However, for larger papers it is desirable to split the text into
+% several semiautonomous files, which can be revised independently.
+% This is especially useful when developing a document in
+% collaboration with several people, since then different parts can be
+% edited independently.  This type of file organization is shown here.
+% 
 
 % \tableofcontents
 
 
-\section{Introduction}
+\chapter{Introduction}
 
-\section{Review of production mechanism and experimental status}
+\chapter{Review of production mechanism and experimental status}
 
 \include{chapter3/lhcb}
 
@@ -57,43 +93,47 @@ Test
 \subsubsection{Online software}
 \subsubsection{Grid infrastructure}
 
-\section{Performance profiling}
-\subsection{Introduction}
-\subsection{Profiling techniques}
-\subsubsection{Hardware counters}
-\subsubsection{Instrumenting the code}
-\subsection{Tools}
-\subsubsection{Valgrind}
-\subsubsection{Gperftools}
-\subsubsection{Intel VTune Amplifier}
-\subsubsection{Comparison}
+\chapter{Performance profiling}
+\section{Introduction}
+\section{Profiling techniques}
+\subsection{Hardware counters}
+\subsection{Instrumenting the code}
+\section{Tools}
+\subsection{Valgrind}
+\subsection{Gperftools}
+\subsection{Intel VTune Amplifier}
+\subsection{Comparison}
 
-\section{LHCb performance profiling}
-\subsection{Introduction}
-\subsection{Overview}
-\subsection{Gaudi Intel Profiler Auditor}
-\subsection{High Level Trigger profiling}
-\subsection{Results}
-\subsection{Conclusions}
-
-\section{Study of $\chi_{b}$ production}
-\subsection{Introduction}
-\subsection{Datasets used}
-\subsubsection{Data}
-\subsubsection{Simulated event samples}
-\subsection{$\Upsilon$ selection}
-
-\subsection{$\chi_{b} \rightarrow \Upsilon \gamma$ selection}
-\subsubsection{Fitting}
-\subsubsection{Optimization}
-\subsubsection{Number of $\chi_{b}$ candidates as function of $p_{T} (\Upsilon)$}
-
-\subsection{Measurement of $\chi_{b} (3P)$ mass}
-\section{Systematic uncertainties}
+\chapter{LHCb performance profiling}
+\section{Introduction}
+\section{Overview}
+\section{Gaudi Intel Profiler Auditor}
+\section{High Level Trigger profiling}
+\section{Results}
 \section{Conclusions}
+
+\chapter{Study of $\chi_{b}$ production}
+\section{Introduction}
+\section{Datasets used}
+\subsection{Data}
+\subsection{Simulated event samples}
+\section{$\Upsilon$ selection}
+\section{$\chi_{b} \rightarrow \Upsilon \gamma$ selection}
+\subsection{Fitting}
+\subsection{Optimization}
+\subsection{Number of $\chi_{b}$ candidates as function of $p_{T} (\Upsilon)$}
+
+\section{Measurement of $\chi_{b} (3P)$ mass}
+
+\chapter{Systematic uncertainties}
+\chapter{Conclusions}
 
 \section*{Acknowledgements}
 
+\renewcommand{\bibname}{References}%  Change the section name from "Bibliography" to "References"
+\bibliographystyle{bib/LHCb}%        Tell BibTeX which .bst file to use (may need full path)
+\bibliography{bib/main}
+% \bibliography{bib/references}%        The .bib file which contains all your exported BibTeX information
 \end{document}
 
 

@@ -1,4 +1,5 @@
-\section{The LHCb experiment}
+\chapter{The LHCb experiment}
+\label{ch_lhcb}
 
 The LHCb is a dedicated heavy flavor physics experiment situated at the LHC
 collider.
@@ -7,7 +8,7 @@ violation and the rare decays of hadrons containing beauty and charm quarks.
 
 This chapter gives a brief overview of the LHCb detector, describes its
 subdetectors and their performances. More detailed information and references
-on LHCb design and operation can be found in [1].
+on LHCb design and operation can be found in \cite{Alves:2008zz}.
 
 Firstly the properties of the LHC accelerator are presented, followed by an
 overview of the LHCb detector. Then the outline of subdetectors used for
@@ -16,18 +17,20 @@ trigger system that is an important part for selecting the most interesting
 events while reducing the event rate. Finally, the software used at the LHCb
 is described.
 
-\subsection{The LHC}
+\section{The LHC}
+\label{ch_lhcb:lhc}
 
 The Large Hadron Collider (LHC) is a circular proton-proton collider  located
 at the European Organization for Nuclear Research (CERN), on the French-Swiss
 border, near Geneva. Before the injection of the proton bunches into the main
 LHC ring protons pass through series of low-energy pre-accelerators, as shown
-in figure~\ref{fig_lhc}.
+in Figure~\ref{fig:lhc}.
 
 \begin{figure}[H]
+\label{fig:lhc}
+\centering
 \includegraphics[width=\textwidth]{figs/lhc.png}
-\label{fig_lhc}
-\caption{The LHC Accelerator System}
+\caption{\small The LHC Accelerator System}
 \end{figure}
 
 The initial linear accelerator (LINAC2) accelerates protons energy to 50 MeV,
@@ -36,7 +39,7 @@ accelerates them to 26 GeV, and finally protons are injected  into the LHC
 complex at an energy of 450 GeV.
 
 The four main LHC experiments situated at the beam crossing points shown in
-figure~\ref{fig_lhc}: ATLAS, ALICE, CMS, LHCb. ALICE dedicated to heavy ion physics.
+figure~\ref{fig:lhc}: ATLAS, ALICE, CMS, LHCb. ALICE dedicated to heavy ion physics.
 ATLAS and CMS are general purpose detectors, which primary goal is to discover
 production of new particles. More details on the  LHCb experiment, data from
  which is studied in this thesis, are given in the next section.
@@ -53,12 +56,13 @@ allows to produce the design center-of-mass energy of $\sqrt{s}=14 TeV$.
 Finally the bunches are designed to collide with a frequency of 40 MHz at the
 interaction points to archive a design luminosity of $10^{34}cm^{-2}c^{-1}$.
 
-The main LHC design parameters are shown in table~\ref{tab_lhc}.
+The main LHC design parameters are shown in Table~\ref{tab:lhc}.
 
-\begin{table}
+\begin{table}[t]
+    \label{tab:lhc}
+    \caption{\small The main LHC design parameters}
     \centering
-    \begin{tabular}{||r|r||}
-      \hline
+    \begin{tabular}{r|r}
         Circumference  &  27 km\\
         Center-of-mass energy &  14 TeV\\
         Injection energy  &  450 GeV\\
@@ -69,13 +73,11 @@ The main LHC design parameters are shown in table~\ref{tab_lhc}.
         Bunch spacing  & 25 ns\\
         Luminosity lifetime & 10 h\\
         Time between 2 fills  &  7 h\\
-      \hline
     \end{tabular}
-    \caption{The main LHC design parameters}
-\label{tab_lhc}
 \end{table}
 
-\subsection{The LHCb}
+\section{The LHCb}
+\label{ch_lhcb:lhcb}
 The LHCb detector is a forward single-arm spectrometer with forward angular
 momentum coverage from 10 mrad to 300 mrad in the bending plane and 10 mrad to
 250 mrad in the non-bending plane. The choice of the unique LHCb geometry is
@@ -83,22 +85,26 @@ justified by the fact, that B hadrons are predominantly produced in narrow
 angular cones in the same forward and backward directions.
 
 \begin{figure}[H]
-\includegraphics[width=\textwidth]{figs/lhcb.png}
-\label{fig_lhc}
-\caption{The LHCb detector}
+\label{fig:lhcb}
+\begin{center}
+\includegraphics[width=\textwidth]{lhcb.png}
+\end{center}
+\caption{\small A schematic view of the LHCb detector \cite{Alves:2008zz}. The interaction point
+where the protons collide is on the left of the figure, and sub-detectors
+are labeled.}
 \end{figure}
 
-\subsection{Tracking system}
-\subsubsection{Vertex Locater}
-\subsubsection{Magnet}
-\subsubsection{Inner tracker}
-\subsubsection{Outer tracker}
+\section{Tracking system}
+\subsection{Vertex Locater}
+\subsection{Magnet}
+\subsection{Inner tracker}
+\subsection{Outer tracker}
 
-\subsection{Particle identification}
-\subsubsection{RICH system}
-\subsubsection{Muon system}
-\subsubsection{Calorimeter system}
+\section{Particle identification}
+\subsection{RICH system}
+\subsection{Muon system}
+\subsection{Calorimeter system}
 
-\subsection{Trigger}
-\subsubsection{L0 trigger}
-\subsubsection{High level trigger}
+\section{Trigger}
+\subsection{L0 trigger}
+\subsection{High level trigger}

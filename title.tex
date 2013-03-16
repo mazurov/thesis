@@ -1,0 +1,96 @@
+% $Id: title-LHCb-PAPER.tex 28385 2012-11-23 17:37:51Z uegede $
+% ===============================================================================
+% Purpose: LHCb-PAPER journal paper title page template
+% Author: 
+% Created on: 2010-09-25
+% ===============================================================================
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  TITLE PAGE  %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\pagenumbering{roman}
+
+% Header ---------------------------------------------------
+\vspace*{-1.5cm}
+\centerline{\large FERRARA UNIVERSITY}
+\vspace*{1.5cm}
+\hspace*{-0.5cm}
+\begin{tabular*}{\linewidth}{lc@{\extracolsep{\fill}}r}
+\ifthenelse{\boolean{pdflatex}}% Logo format choice
+{\vspace*{-2.7cm}\mbox{\!\!\!\includegraphics[width=.14\textwidth]{figs/lhcb-logo.pdf}} & &}%
+{\vspace*{-1.2cm}\mbox{\!\!\!\includegraphics[width=.12\textwidth]{figs/lhcb-logo.eps}} & &}%
+\\
+ & & Version 0.1 \\  % ID 
+ & & Changelog \\  % ID 
+ & & \today \\ % Date - Can also hardwire e.g.: 23 March 2010
+ & & \\
+% not in paper \hline
+\end{tabular*}
+
+\vspace*{4.0cm}
+
+% Title --------------------------------------------------
+{\bf\boldmath\huge
+\begin{center}
+  High Level Trigger software performance profiling and $\chi_{b}$ production study
+\end{center}
+}
+
+\vspace*{2.0cm}
+
+% Authors -------------------------------------------------
+\begin{center}
+Alexander Mazurov\footnote{Authors are listed on the following pages.}
+\end{center}
+
+\vspace{\fill}
+
+% Abstract -----------------------------------------------
+\begin{abstract}
+  \noindent
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{abstract}
+
+\vspace*{2.0cm}
+
+\begin{center}
+  Submitted to Journal of Obscure Guidelines A
+\end{center}
+
+\vspace{\fill}
+
+{\footnotesize 
+\centerline{\copyright~CERN on behalf of the \lhcb collaboration, license \href{http://creativecommons.org/licenses/by/3.0/}{CC-BY-3.0}.}}
+\vspace*{2mm}
+
+\end{titlepage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  EOD OF TITLE PAGE  %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  empty page follows the title page ----
+\newpage
+\setcounter{page}{2}
+\mbox{~}
+\newpage
+
+% Author List ----------------------------
+%  You need to get a new author list!
+% \input{LHCb_authorlist.tex}
+
+\cleardoublepage
+
+
+
+
+
+
+
