@@ -4,8 +4,8 @@ all:
 	latexmk -pv -jobname=build/mazurov-thesis -pdf mazurov-thesis
 
 
-view: mazurov-thesis.pdf
-	evince mazurov-thesis.pdf &
+view: build/mazurov-thesis.pdf
+	evince build/mazurov-thesis.pdf &
 
 clean:
 	rm -rf build
