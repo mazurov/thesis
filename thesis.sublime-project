@@ -1,17 +1,31 @@
 {
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"${project_path}/scripts/bootstrap"
+			],
+			"name": "Compile (thesis)",
+			"shell": true,
+			"working_dir": "${project_path}"
+		}
+	],
 	"folders":
 	[
 		{
+			"follow_symlinks": true,
 			"path": "."
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/amazurov/dev/chep2012"
 		}
 	],
-
-    "settings": {
-        "spell_check": true,
-        "font_size": 10,
-        "ignored_words":
-        [
-            "vertices"
-        ],
-    }
+	"settings":
+	{
+		"color_scheme": "Packages/User/base16-eighties.dark (SL).tmTheme",
+		"font_size": 12,
+		"spell_check": true
+	}
 }

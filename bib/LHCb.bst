@@ -28,6 +28,7 @@ ENTRY
     month
     note
     DOI
+    url
     number
     organization
     pages
@@ -408,6 +409,13 @@ FUNCTION {format.DOI}
   if$
 }
 
+FUNCTION {format.url}
+{ url empty$
+    { ""}
+    { "~\href{" url * "}{" * url * "}" *}
+  if$
+}
+
 
 FUNCTION {format.report}
 { report empty$
@@ -503,6 +511,10 @@ FUNCTION {format.collaboration}
 
 FUNCTION {format.btitle}
 { title emphasize
+}
+
+FUNCTION {format.inbtitle}
+{ "in " title emphasize *
 }
 
 FUNCTION {tie.or.space.connect}
@@ -875,6 +887,13 @@ FUNCTION {article}
   if$
 }
 
+FUNCTION {electronic}
+{  output.bibitem
+   format.btitle "title" output.check
+   format.url output
+   fin.entry
+}
+
 FUNCTION {book}
 { output.bibitem
   format.collaboration output
@@ -937,27 +956,20 @@ FUNCTION {booklet}
 FUNCTION {inbook}
 { output.bibitem
   format.collaboration output
-  author empty$
-    { format.editors "author and editor" output.check }
-    { format.authors output.nonnull
-      crossref missing$
-	{ "author and editor" editor either.or.check }
-	'skip$
-      if$
-    }
-  if$
-  format.btitle "title" output.check
+  
+  format.authors output
+
+  format.inbtitle "title" output.check
+
+  format.editors output
   crossref missing$
     { format.bvolume output
       format.chapter.pages "chapter and pages" output.check
-      new.block
       format.number.series output
-      new.block
       publisher "publisher" output.check
       address output
     }
     { format.chapter.pages "chapter and pages" output.check
-      new.block
       format.book.crossref output.nonnull
     }
   if$
@@ -970,6 +982,45 @@ FUNCTION {inbook}
   format.DOI output
   fin.entry
 }
+
+% FUNCTION {inbook}
+% { output.bibitem
+%   format.collaboration output
+  
+%   author empty$
+%     { format.editors "author and editor" output.check }
+%     { format.authors output.nonnull
+%       crossref missing$
+% 	{ "author and editor" editor either.or.check }
+% 	'skip$
+%       if$
+%     }
+%   if$
+
+%   format.inbtitle "title" output.check
+%   crossref missing$
+%     { format.bvolume output
+%       format.chapter.pages "chapter and pages" output.check
+%       new.block
+%       format.number.series output
+%       new.block
+%       publisher "publisher" output.check
+%       address output
+%     }
+%     { format.chapter.pages "chapter and pages" output.check
+%       new.block
+%       format.book.crossref output.nonnull
+%     }
+%   if$
+%   format.edition output
+%   format.date "year" output.check
+%   new.block
+%   format.eprint output
+%   new.block
+%   note output
+%   format.DOI output
+%   fin.entry
+% }
 
 FUNCTION {incollection}
 { output.bibitem

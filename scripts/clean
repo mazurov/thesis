@@ -1,0 +1,4 @@
+#!/bin/sh
+
+latexmk -jobname=mazurov-thesis -pdf --outdir=build -c main.tex
+./scripts/bootstrap

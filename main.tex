@@ -15,8 +15,21 @@
 \newboolean{uprightparticles}
 \setboolean{uprightparticles}{false} %True for upright particle symbols
 
+\newboolean{inbibliography}
+\setboolean{inbibliography}{false} %True once you enter the bibliography
+
 \input{preamble}
-\usepackage{longtable} % only for template; not usually to be used in PAPERs
+
+% ============================================================================
+% my commands and defs
+\usepackage{booktabs}
+\def\tesla {\ensuremath{\rm \,T}\xspace}
+\newcommand\iamp{{Intel\textsuperscript{\textregistered} VTune\texttrademark Amplifier XE} }
+\newcommand\amp{{VTune\texttrademark Amplifier XE} }
+\newcommand\intel{{Intel\textsuperscript{\textregistered}} }
+\newcommand\google{{Google\textsuperscript{\textregistered} }}
+% ============================================================================
+
 
 \hypersetup{
   colorlinks = true,
@@ -79,38 +92,39 @@
 % edited independently.  This type of file organization is shown here.
 % 
 
-% \tableofcontents
+\tableofcontents
 
 
 \chapter{Introduction}
 
 \chapter{Review of production mechanism and experimental status}
 
-\include{chapter3/lhcb}
+\input{lhcb}
 
-\subsection{Software}
-\subsubsection{Core software}
-\subsubsection{Online software}
-\subsubsection{Grid infrastructure}
+% \subsection{Software}
+% \subsubsection{Core software}
+% \subsubsection{Online software}
+% \subsubsection{Grid infrastructure}
 
-\chapter{Performance profiling}
-\section{Introduction}
-\section{Profiling techniques}
-\subsection{Hardware counters}
-\subsection{Instrumenting the code}
-\section{Tools}
-\subsection{Valgrind}
-\subsection{Gperftools}
-\subsection{Intel VTune Amplifier}
-\subsection{Comparison}
+% \chapter{Performance profiling}
+% \section{Introduction}
+% \section{Profiling techniques}
+% \subsection{Hardware counters}
+% \subsection{Instrumenting the code}
+% \section{Tools}
+% \subsection{Valgrind}
+% \subsection{Gperftools}
+% \subsection{Intel VTune Amplifier}
+% \subsection{Comparison}
 
-\chapter{LHCb performance profiling}
-\section{Introduction}
-\section{Overview}
-\section{Gaudi Intel Profiler Auditor}
-\section{High Level Trigger profiling}
-\section{Results}
-\section{Conclusions}
+
+\input{profiler}
+% \section{Introduction}
+% \section{Overview}
+% \section{Gaudi Intel Profiler Auditor}
+% \section{High Level Trigger profiling}
+% \section{Results}
+% \section{Conclusions}
 
 \chapter{Study of $\chi_{b}$ production}
 \section{Introduction}
@@ -131,9 +145,10 @@
 \section*{Acknowledgements}
 
 \renewcommand{\bibname}{References}%  Change the section name from "Bibliography" to "References"
-\bibliographystyle{bib/LHCb}%        Tell BibTeX which .bst file to use (may need full path)
-\bibliography{bib/main}
-% \bibliography{bib/references}%        The .bib file which contains all your exported BibTeX information
+
+\setboolean{inbibliography}{true}
+\bibliographystyle{bib/LHCb}
+\bibliography{bib/main,bib/perf,bib/LHCb-PAPER,bib/LHCb-CONF,bib/LHCb-DP}
 \end{document}
 
 

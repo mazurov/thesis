@@ -1,0 +1,7 @@
+{
+    "linters": {
+        "chktex": {
+            "nowarn": [1,22,30]
+        }
+    }
+}
