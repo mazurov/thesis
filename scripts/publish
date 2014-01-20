@@ -1,0 +1,6 @@
+#!/bin/sh
+TARGET="/afs/cern.ch/user/a/amazurov/www"
+SOURCE="./build/mazurov-thesis.pdf"
+cp $SOURCE $TARGET
+echo "File '$SOURCE' copied to '$TARGET'"
+echo "Url: http://cern.ch/amazurov/mazurov-thesis.pdf"
