@@ -22,7 +22,27 @@
 
 % ============================================================================
 % my commands and defs
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{multicol}
 \usepackage{booktabs}
+\usepackage{rotating}  %
+\usepackage{graphpap}  %
+\usepackage{mathrsfs}
+\usepackage{multirow}  %
+\usepackage{cancel}    %
+\usepackage{bm}
+% \usepackage{tabularx}
+\usepackage{verbatim}
+\usepackage[percent]{overpic}
+\usepackage{longtable} % only for template; not usually to be used in PAPERs
+\usepackage{cleveref}
+
+\input{symbols-def}
+
+\newcommand{\systpol}{\ensuremath{\mathrm{\,(syst.pol)}}\xspace}
+
 \def\tesla {\ensuremath{\rm \,T}\xspace}
 \newcommand\iamp{{Intel\textsuperscript{\textregistered} VTune\texttrademark Amplifier XE} }
 \newcommand\amp{{VTune\texttrademark Amplifier XE} }
@@ -127,20 +147,15 @@
 % \section{Conclusions}
 
 \chapter{Study of $\chi_{b}$ production}
-\section{Introduction}
-\section{Datasets used}
-\subsection{Data}
-\subsection{Simulated event samples}
-\section{$\Upsilon$ selection}
-\section{$\chi_{b} \rightarrow \Upsilon \gamma$ selection}
-\subsection{Fitting}
-\subsection{Optimization}
-\subsection{Number of $\chi_{b}$ candidates as function of $p_{T} (\Upsilon)$}
-
-\section{Measurement of $\chi_{b} (3P)$ mass}
-
-\chapter{Systematic uncertainties}
-\chapter{Conclusions}
+\input{csintroduction}
+\input{upsilon}
+\input{chib}
+\input{ratio}
+\input{mc}
+\input{fraction}
+\input{systematic}
+\input{results}
+\input{appendix}
 
 \section*{Acknowledgements}
 

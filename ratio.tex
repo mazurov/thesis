@@ -1,0 +1,80 @@
+\section{\texorpdfstring{$\chi_{b1}$}{chib1} and \texorpdfstring{$\chi_{b2}$}{chib2} yields ratio}
+\label{sec:ratio}
+
+The ratio between $\chi_{b2}$ and $\chi_{b1}$ candidates is one of the parameters
+in our fit model (Section~\ref{sec:chib:fit}). Nowadays this
+ratio is estimated only in theoretical works, but recent
+unpublished results with converted photons at \lhcb confirm these predictions.
+
+In the recent theoretical work~\cite{Likhoded:2012hw} is shown
+(Figure~\ref{fig:frac:ratio}) that the experimental results fo  cross section
+and the transverse momentum distributions of the charmonium $\chi_{c1,2}$
+states confirms the theory. 
+
+\begin{figure}[H]
+  \setlength{\unitlength}{1mm}
+  \centering
+  \begin{picture}(75,60)
+    %
+     \put(0,0){\includegraphics[width=75mm, height=60mm]{ratio/theory}}
+
+
+     \put(-1,22){\begin{sideways}$\sigma({\chi_2})/\sigma({\chi_1}$)\end{sideways}}
+     \put(46,30){\tiny $\chi_b$ scaled}
+     \put(45,27){\tiny (this study, MC data)}
+
+    % \graphpaper[5](0,0)(75, 60)
+  \end{picture}
+  \caption {\small This figure is taken from~\cite{Likhoded:2012hw} and shows
+  transverse momentum distributions of the
+$d\sigma\left[\chi_{2}\right]/d\sigma[\chi_{1}]$ ratio. Solid and dashed lines
+stand for charmonium and bottomonium mesons. The dot-dashed line corresponds to
+the rescaled bottomonium ratio:
+$\sigma_{b2}/\sigma_{b1}(M_{\chi_c}/M_{\chi_b})\,p_T)$. The experimental results
+for charmonium from LHCb \cite{LHCb-PAPER-2013-028} are shown with dots,
+CDF~\cite{CDF:2007bra} --- with rectangles, and CMS~
+\cite{CMS-PAS-BPH-11-010} --- with triangles. The scaled transverse momentum
+distribution of \chib on Monte-Carlo data from this study is shown with open
+circles. As it is seen, it almost matches the bottomonium curve. Thus the
+results of this work have a reason to be used for fixing the fractions of
+\chibone and \chibtwo yields on data. }
+  \label{fig:frac:ratio}
+\end{figure}
+
+Since the result for bottomonium ratio could be obtained by rescaling the
+charmonium curve, the  \chibone and \chibtwo ratio can be  measured by the
+following formula in specified transverse momentum intervals of $\Upsilon$:
+\begin{equation}
+    \frac{N_{\chibtwo}^{data}}{N_{\chibone}^{data}} = \frac{\sigma(\chibtwo)}{\sigma(\chibone)}
+    \frac{Br(\chibtwo\to\Upsilon\gamma)}{Br(\chibone\to\Upsilon\gamma)}\frac{\eps_{\chibtwo}^{\gamma}}{\eps_{\chibone}^{\gamma}}
+\label{eqn:mc_ratio}
+\end{equation}
+\noindent where $\sigma(\chibtwo) / \sigma(\chibone)$ is a ratio
+from~\cite{Likhoded:2012hw}, the branching fractions $Br(\chi_{b1,2} \to \Upsilon \gamma)$ 
+are known experimentally~(\Cref{tab:branching}) and reconstruction efficiencies 
+$\eps_{\chi_{b1,2}}^{\gamma}$ are obtained in this study~(\Crefrange{tab:mc:eff:chib1_y1}{tab:mc:eff:chib3_y3}).
+
+\begin{table}[H]
+\caption{The branching fractions of radiative \chibOneP and \chibTwoP mesons
+decays are known experimentally~\cite{PDG2012}}
+\centering
+\begin{tabular}{l}
+$Br(\chiboneOneP \to \Y1S \gamma) = 35\% \pm 8\%$ \\
+$Br(\chibtwoOneP \to \Y1S \gamma) = 22\% \pm 4\%$ \\
+$Br(\chiboneTwoP \to \Y1S \gamma) = 8.5\% \pm 1.3\%$ \\
+$Br(\chibtwoTwoP \to \Y1S \gamma)  = 7.1\% \pm 1\%$ \\
+$Br(\chiboneTwoP \to \Y2S \gamma) = 21\% \pm 4\%$ \\
+$Br(\chibtwoTwoP \to \Y1S \gamma) = 16\% \pm 2.4\%$ \\
+\end{tabular}
+\label{tab:branching}
+\end{table}
+
+The $N_{\chibone}^{data}/(N_{\chibone}^{data} + N_{\chibtwo}^{data})$ ratio is
+estimated by~\Cref{eqn:mc_ratio} to be in the range between 0.4 and 0.7 for
+\chibOneP and \chibTwoP decays. The ratio for \chibThreeP decays could be
+calculated because the branching fraction of these decays are unknown. In this
+study this ratio is fixed to 0.5 and systematic uncertainty is assigned to this
+decision.
+
+
+% \input{tables/ratio/lambda}

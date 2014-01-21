@@ -456,8 +456,7 @@
 \def\chiczero {{\ensuremath{\Pchi_{\cquark 0}}}\xspace}
 \def\chicone  {{\ensuremath{\Pchi_{\cquark 1}}}\xspace}
 \def\chictwo  {{\ensuremath{\Pchi_{\cquark 2}}}\xspace}
-  %\mathchardef\Upsilon="7107
-  \def\Y#1S{\ensuremath{\PUpsilon{(#1S)}}\xspace}% no space before {...}!
+\def\Y#1S{\ensuremath{\PUpsilon{(#1S)}}\xspace}% no space before {...}!
 \def\OneS  {{\Y1S}}
 \def\TwoS  {{\Y2S}}
 \def\ThreeS{{\Y3S}}
@@ -690,7 +689,7 @@
 \newcommand{\unit}[1]{\ensuremath{\rm\,#1}\xspace}          % {kg}
 
 %% Energy and momentum
-\newcommand{\tev}{\ifthenelse{\boolean{inbibliography}}{\ensuremath{~T\kern -0.05em eV}\xspace}{\ensuremath{\mathrm{\,Te\kern -0.1em V}}}\xspace}
+\newcommand{\tev}{\ensuremath{\mathrm{\,Te\kern -0.1em V}}\xspace}
 \newcommand{\gev}{\ensuremath{\mathrm{\,Ge\kern -0.1em V}}\xspace}
 \newcommand{\mev}{\ensuremath{\mathrm{\,Me\kern -0.1em V}}\xspace}
 \newcommand{\kev}{\ensuremath{\mathrm{\,ke\kern -0.1em V}}\xspace}
