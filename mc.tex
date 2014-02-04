@@ -1,3 +1,4 @@
+
 \section{Simulation}
 \label{sec:mc}
 
@@ -9,9 +10,9 @@ A comparison of the distribution of the relevant observables used in this
 analysis was performed on real and simulated data, in order to assess the
 reliability of Monte Carlo in computing efficiencies. It should be stressed
 that, since a relative branching fraction is measured, systematic effects cancel
-at first order.
+at the first order.
 
-Combinatorial background has been subtracted in real data by using an
+Combinatorial background has been subtracted in real data by 
 \sPlot  technique~\cite{Pivk:2004ty}.
 The resulting signal weights are used to obtain the signal distribution for each
 relevant variable. 
@@ -19,36 +20,44 @@ relevant variable.
 % These distributions are compared with simulation, as
 % shown in Figures~[\ref{fig:mc:datavsmc:compare1}, \ref{fig:mc:datavsmc:compare2}].
 
-In Figures~\ref{fig:mc:datavsmc:compare1} and \ref{fig:mc:datavsmc:compare2}
+In \Cref{fig:mc:datavsmc:compare1,fig:mc:datavsmc:compare2}
 these distributions  are shown for signals in $\chib \to \Y1S \gamma$ decays
 compared with the corresponding simulated distributions.
 
 \input{pics/mc/vsdata}
 
 
-The agreement is generally very good except the distribution of photon
-transverse momentum ~\ref{fig:mc:datavsmc:gamma}. Imperfect  distribution of
-photon transverse momentum can be explained by incorrect sPlot behavior in case
-when this technique is applied on variables that affect the background form. In
-our study background form depends on the photon transverse momentum.
+The agreement is generally very good except for the distribution of photon
+transverse momentum~(\Cref{fig:mc:datavsmc:gamma}). This is due to the sPlot
+technique, when applied on variables that affect the background shape. In our
+study the background in the fit depends on the photon transverse momentum,
+hence a mismatch between data and simulation is expected. Other discrepancies
+observed in the distributions for \chibThreeP decays are possibly due a poor
+signal to background ratio, which translates into large systematic
+uncertainties in the sWeights
+
 
 % =============================================================================
 \subsection{Selection efficiencies}
 \label{sec:mc:eff}
 
-The invariant mass difference distributions of matched events in the \chib
-simulation are shown in Figure~\ref{fig:mc:eff:nominal}. The left tails are
-almost flat at these plots, so on the real data the signal events in these parts
-are hard to separate from background. For this reason the number of MC-true
-\chib events for efficiency measurements were obtained by performing a fit with
-the background component that matches events the tails. The number of $\Upsilon$
-events is obtained by counting MC-true $\Upsilon$ events.
+The invariant mass difference distributions of matched MC-true events in the
+\chib simulation are shown in~\Cref{fig:mc:eff:nominal}. The flat left tails
+are due to photons which, although being correctly associated to the χ decay,
+are poorly reconstructed in the calorimeter (due to e.g. cracks, spillover,
+etc.). In principle, these tails could be modeled in our fit to signal, but in
+practice they will not be distinguishable from background. Therefore, the
+number of \chib events for efficiency calculation is not determined by simple
+event counting but from a fit where the tails are considered as background. In
+this fit the signal is described by CrystalBall function and the background is
+a product of first order polynomial and exponential. The number of $\Upsilon$
+events is obtained by counting all matched MC-true $\Upsilon$ events.
 
 \input{pics/mc/nominal_fits}
 
-Figure~\ref{fig:mc:eff} show the measured efficiency of \chib reconstruction.
-More details on these measurements are show in
-Tables~[\ref{tab:mc:eff:chib1_y1}--\ref{tab:mc:eff:chib3_y3}] in Appendix.
+\Cref{fig:mc:eff} shows the measured efficiency of \chib reconstruction.
+More details on these measurements are shown
+in~\Crefrange{tab:mc:eff:chib1_y1}{tab:mc:eff:chib3_y3} in Appendix.
 
 
 \input{pics/mc/eff}

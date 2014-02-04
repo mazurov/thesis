@@ -4,46 +4,41 @@
 %% ============================================================================
 \subsection{Selection}
 \label{sec:ups:selelection}
-The data sample used in this analysis has been collected by \lhcb in 2011 and
-2012, at center-of-mass energies of \sqs=7\tev and 8\tev with corresponding
-integrated luminosities 1089\invpb and 2011\invpb.
-The pre-selected event candidates were taken from microDST dedicated to
-quarkonia studies (WGBandQSelection4--1) that was processed using a 
-stripping lines Stripping20r1 for 2011 data and Stripping20 for 2012 data.
-
-%% ============================================================================
 \subsubsection{Pre-selection}
 \label{sec:upsilon:selelection:preselection}
-
-The selection starts by forming candidates from pairs of oppositely-charged
-tracks identified as muons and originated from a common vertex.
-Good track quality is ensured by requiring a $\chisq$ per degree of
-freedom ($\chisq/\rm{ndf}$) to be less then 4 for the track fit and primary
-vertex probability greater than 0.5 \%.
-The muons were required to have a transverse momentum higher than 1 \gev.
-To suppress duplicate tracks a the cut on Kullback-Leibler (KL)
-distance~\cite{Needham:1082460} was used: only tracks with symmetrized KL distance less
-than 5000 were selected.The primary vertex of dimuon candidate is required to be within luminous region
-defined as $|z_{PV}| < 0.5 m$ and $x_{PV}^2 + y_{PV}^2 < 100 mm^2$.
+The pre-selected event candidates were taken from datasets dedicated to
+quarkonia studies in \lhcb. The selection starts by forming candidates from
+pairs of oppositely-charged tracks identified as muons and originated from a
+common vertex. Good track quality is ensured by requiring a $\chisq$ per number
+of degree of freedom ($\chisq/\rm{ndf}$) to be less then 4 for the track fit
+and primary vertex probability greater than 0.5 \%. The muons were required to
+have a transverse momentum higher than 1 \gevc. To suppress duplicate tracks a
+cut on the Kullback-Leibler~\cite{Needham:1082460} (KL) distance was used: only
+tracks with symmetrized KL distance less than 5000 were selected\footnote{The
+KL distance measures the difference between PDFs that describe track
+parameters. If the distance is small then two tracks are likely to be
+clones.}.The primary vertex of dimuon candidate is required to be within
+luminous region defined as $|z_{PV}| < 0.5 m$ and $x_{PV}^2 + y_{PV}^2 < 100
+mm^2$.
 %============================================================================
 \subsubsection{Trigger}
 \label{sec:upsilon:selection:trigger}
 
 For Upsilon studies the event candidates  were required to trigger by three
 trigger levels ('TOS' requirement). The first level is L0DiMuon which  requires
-two muon candidates with their $p_T$ product larger than 1.68 \gevcc and
-a relaxed SPD requirement (less then 9000 SPD hits).
+two muon candidates with their $p_T$ product larger than 1.68$\gev^2/c^2$ and
+a relaxed SPD requirement (less than 9000 SPD hits).
 
 The second level is HLT1 trigger where the event candidates were required to
 pass the Hlt1DiMuonHighMass line.
 This line triggers events with  two well reconstructed tracks  which have hits
-in the muon system  that have a transverse momentum higher that 500 \mevc and 
-a total momentum higher that 6 \gevc that produced from a common vertex with
-invariant mass higher than 2.7 \gevcc.
+in the muon system  that have a transverse momentum higher that 500\mevc and 
+a total momentum higher than 6\gevc that produced from a common vertex with
+an invariant mass higher than 2.7\gevcc.
 
-At the last HLT2 level the event need to be accepted by the HLT2DiMuonB line.
+At the last HLT2 level the event needs to be accepted by the HLT2DiMuonB line.
 This line confirms the HLT1 decision and requires the invariant mass of the
-dimuon pair to be larger than 4.7 \gevcc.
+dimuon pair to be larger than 4.7\gevcc.
 
 %% ============================================================================
 \subsubsection{This study selection}
@@ -70,10 +65,10 @@ Table~\ref{tab:upsilon:selection:study:summary}.
 \label{sec:upsilon:fit}
 To determine the $\Upsilon$ meson signal yields, an unbinned maximum likelihood
 fit to dimuon mass distribution has been performed. The signals have been
-modeled with the sum of three double-sided CrystalBall (DSCB) functions and an exponential
-function with floating $\tau$ parameter for the combinatorial background. Each
-of the DSCB functions corresponds to \Y1S, \Y2S and \Y3S signals and can
-be written in the following form:
+modeled with the sum of three double-sided CrystalBall (DSCB) functions and the
+combinatorial background by an exponential function with floating $\tau$
+parameter. Each of the DSCB functions corresponds to \Y1S, \Y2S and \Y3S
+signals and can be written in the following form:
 
 \begin{equation}
 DSCB(x) = N \times

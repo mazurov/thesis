@@ -50,19 +50,19 @@ current tools do not use the counters multiplexing feature of perfmon2 library,
 the target program should be run several times to collect all required hardware
 counters. As a result, the profiling time is significantly increasing.
 
-To fill some of the the gaps of the previous tools we created the Gaudi Intel
-Profiling Auditor. This profiling tool uses the same module principle that was
+To fill some of the the gaps of the previous tools the Gaudi Intel
+Profiling Auditor was created. This profiling tool uses the same module principle that was
 described in~\cite{modular}, but is based on \iamp~\cite{vtune}.
 \amp is the newer performance profiling tool, that provides better
 functionality than perfmon2 library.
 
-In the next section we briefly review \iamp. Then we discuss how the Gaudi
-Intel Profiling Auditor can integrate \amp to the Gaudi framework and show
+In the next section \iamp is briefly reviewed. Then is discussed how the Gaudi
+Intel Profiling Auditor can integrate \amp to the Gaudi framework and shown
 examples of using those tools to profile \lhcb's HLT.
 
 \section[VTune Amplifier]{\iamp}
-In this section we give an overview of the modern performance profiling tool
-\iamp, describe its basic features and analysis reports.
+This section gives an overview of \iamp profiling tool and
+describes its basic features and analysis reports.
 
 \subsection{Overview}
 \iamp is a commercial application for software performance analysis that is
@@ -72,10 +72,11 @@ instrumented before execution and the program is fully supervised by the tool.
 A target application can be profiled without any modification of the codebase.
 
 \iamp has  various kinds of code analysis including hotspot analysis,
-concurrency analysis, locks and waits analysis. In our tools we use a hotspot
-analysis based on the user-mode  sampling feature of \amp. User-mode sampling
-allows to profile a program by exploring a call stack of a running program and
-produce one simple metric --- amount of time spent in the function.
+concurrency analysis, locks and waits analysis. In Profiling Auditor a
+hotspot analysis based on the user-mode sampling feature of \amp i used.
+User-mode sampling allows to profile a program by exploring a call stack of a
+running program and produce one simple metric --- amount of time spent in the
+function.
 
 The amount of time spent in a function (CPU time) is calculated by interrupting
 a process and collecting samples of call stacks from all active threads. CPU
@@ -538,4 +539,4 @@ from the profiling results to monitor the changes in performance and to create
 reports on a regular basis if modifications lead to significant
 performance degradations. Therefore, for this purpose a system for systematic
 profiling is developing at \lhcb, where the Gaudi Intel Profiling Auditor
-is one of its main parts.
+is one of the main parts.

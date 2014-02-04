@@ -38,7 +38,7 @@
 \usepackage[percent]{overpic}
 \usepackage{longtable} % only for template; not usually to be used in PAPERs
 \usepackage{cleveref}
-
+\usepackage[toc,page]{appendix}
 \input{symbols-def}
 
 \newcommand{\systpol}{\ensuremath{\mathrm{\,(syst.pol)}}\xspace}
@@ -48,6 +48,7 @@
 \newcommand\amp{{VTune\texttrademark Amplifier XE} }
 \newcommand\intel{{Intel\textsuperscript{\textregistered}} }
 \newcommand\google{{Google\textsuperscript{\textregistered} }}
+\def\mmu        {\ensuremath{\Pmu}\xspace}
 % ============================================================================
 
 
@@ -146,8 +147,9 @@
 % \section{Results}
 % \section{Conclusions}
 
-\chapter{Study of $\chi_{b}$ production}
+\chapter{Study of \texorpdfstring{$\chi_{b}$}{xb} production}
 \input{csintroduction}
+\input{datasets}
 \input{upsilon}
 \input{chib}
 \input{ratio}
@@ -156,8 +158,7 @@
 \input{systematic}
 \input{results}
 \input{appendix}
-
-\section*{Acknowledgements}
+\input{acknowledgements}
 
 \renewcommand{\bibname}{References}%  Change the section name from "Bibliography" to "References"
 

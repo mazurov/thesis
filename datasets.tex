@@ -1,0 +1,32 @@
+\section{Datasets}
+\label{sec:datasets}
+
+The measurement of the $\Upsilon$ production cross section is based on proton-
+proton collision data collected with the LHCb detector at 7 and 8\tev
+center-of-mass energy in 2011 and 2012 with corresponding integrated luminosities
+1089\invfb and 2011\invfb.
+
+\subsubsection{Signal MonteCarlo}
+
+A full event and detector simulation is used for signal studies, and to
+estimate the $\gamma$ reconstruction efficiency. The event samples were
+generated with the LHCb tune of Pythia\cite{LHCb-PROC-2010-056}, followed by a
+full Geant\cite{Allison:2006ve} event simulation and LHCb reconstruction.
+
+During the event simulation the products of \chib decays are required
+to have their momentum pointing into the angular acceptance of \lhcb. This
+requirement is referred to as the generator cut. Only events that have passed this
+requirement were saved and subsequently reconstructed.
+
+The simulation was performed for both 7 and 8\tev operating conditions. In
+total $6.2\times10^7$ events for all signal modes (\chib decaying to $\Upsilon
+\gamma$) and magnet polarity were simulated and stored for subsequent
+analysis. \Cref{tab:nmc} shows the number of simulated events for each decay
+mode.
+
+
+\input{tables/datasets/nmc}
+
+The procedure to estimate the
+reconstruction efficiency are described in detail in~\Cref{sec:mc:eff}.
+
