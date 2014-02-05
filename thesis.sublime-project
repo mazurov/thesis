@@ -8,7 +8,12 @@
 			],
 			"name": "Compile (thesis)",
 			"shell": true,
-			"working_dir": "${project_path}"
+			"working_dir": "${project_path}",
+			"variants": [
+			        { "cmd": ["xdg-open build/mazurov-thesis.pdf&"],
+			          "name": "Run"
+			        }
+			  ]
 		}
 	],
 	"folders":
@@ -20,10 +25,6 @@
 		{
 			"follow_symlinks": true,
 			"path": "/home/amazurov/dev/chep2012"
-		},
-		{
-			"follow_symlinks": true,
-			"path": "/home/amazurov/dev/note"
 		}
 	],
 	"settings":

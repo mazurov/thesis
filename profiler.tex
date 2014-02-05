@@ -35,9 +35,9 @@ application’s structural component that is used to group logically related
 functions.  Grouping performance results by module allows a better insight into
 where the performance issues are coming from. Since each module is under the
 responsibility of a specific developer, the provided reports can be delivered
-to the right person. For example, in the Gaudi~\cite{Barrand:2001ny} core
+to the right person. For example, in the \gaudi~\cite{Barrand:2001ny} core
 framework at LHCb each algorithm used for event processing is such a module
-which can be profiled independently. More details on Gaudi will be given in
+which can be profiled independently. More details on \gaudi will be given in
 Section~\ref{sec:gaudi}.
 
 This design principle was first implemented in a set of profiling tools based
@@ -57,7 +57,7 @@ described in~\cite{modular}, but is based on \iamp~\cite{vtune}.
 functionality than perfmon2 library.
 
 In the next section \iamp is briefly reviewed. Then is discussed how the Gaudi
-Intel Profiling Auditor can integrate \amp to the Gaudi framework and shown
+Intel Profiling Auditor can integrate \amp to the \gaudi framework and shown
 examples of using those tools to profile \lhcb's HLT.
 
 \section[VTune Amplifier]{\iamp}
@@ -212,7 +212,7 @@ Profiling Auditor can enhance \amp reports.
 
 \subsection{Gaudi}
 \label{sec:gaudi}
-Gaudi is a C++ software framework used to build event data processing
+\gaudi is a C++ software framework used to build event data processing
 applications using a set of standard components. \gaudi is a core framework used
 by several HEP experiments, in particular \lhcb and \atlas at \lhc. All of the
 event processing applications, including simulation, reconstruction, high-level
@@ -231,14 +231,14 @@ Algorithms and adding specific Services and Tools.}
 \end{minipage}
 \end{figure}
 
-The Gaudi framework is a highly customizable framework. Any component of the
+The \gaudi framework is a highly customizable framework. Any component of the
 system can be configured by user options.
 
 \subsubsection{Gaudi Auditors}
 
-The Application Manager is one of the major components of Gaudi. It takes care
+The Application Manager is one of the major components of \gaudi. It takes care
 of instantiating and calling algorithms. A supplement to this component  is the
-Auditor Service that enable to add auditors to a Gaudi application. The auditor
+Auditor Service that enable to add auditors to a \gaudi application. The auditor
 is a set of user functions that are called on some workflow events in the
 Manager. For example, we could add custom action that is called when the
 Manager wants to execute some algorithm or when an algorithm is finished. There
@@ -253,10 +253,10 @@ tool.
 
 \subsubsection{Objectives.}
 
-A Gaudi application can be profiled by \amp  without any modifications of the
+A \gaudi application can be profiled by \amp  without any modifications of the
 codebase.  This tool can collect any data about CPU consumption in code lines,
 functions, classes, shared libraries, threads, but it has one disadvantage.
-\amp knows nothing about Gaudi framework's algorithms. However, algorithms are
+\amp knows nothing about \gaudi framework's algorithms. However, algorithms are
 the central point of any framework application, all major event processing
 occurs there. In principle, a general task of framework users is just to write
 algorithms that solve a problem and usually nothing more. So, if the profiler
@@ -267,7 +267,7 @@ order to provide such report the Gaudi Intel Profiler Auditor was developed.
 
 \subsubsection{User API of \iamp.}
 
-Each Gaudi algorithm has a name that is assigned to an algorithm at run-time.
+Each \gaudi algorithm has a name that is assigned to an algorithm at run-time.
 \amp, in turn, is supplied with a C library that allows to import those names
 to the target report. In order to use the library from user applications, the
 public User API is provided in \amp. The API enables to control the data
@@ -299,12 +299,12 @@ this case, we do not need to modify the algorithm’s code and need only to writ
 two callback functions: at algorithm start and finish. In order to generate the
 target report those functions need to call Event API functions of \amp.
 
-An appropriate auditor was created and named Gaudi Intel Profiling Auditor. It
-was deployed to the GaudiProfiling package of Gaudi framework as a shared
+An appropriate auditor was created and named \gaudi Intel Profiling Auditor. It
+was deployed to the GaudiProfiling package of \gaudi framework as a shared
 library. Below we show how this profiling tool marks regions and what reports
 can be generated.
 
-Gaudi has a special type of algorithms --- Sequence. Each instance of Sequence
+\gaudi has a special type of algorithms --- Sequence. Each instance of Sequence
 can execute other algorithms or sequences. So, an application's event loop
 could have not only a flat but also a tree structure. Moreover, the same
 algorithm instance can occur in different sequences. Therefore, it was decided
@@ -359,7 +359,7 @@ main goal was achieved --- we get the report that groups function CPU usage by
 algorithm. So, the next step is only to interpret profiling results by
 application developers and, if needed, to tune algorithms.
 
-In addition to reports on algorithms, in the Gaudi Intel Profiling Auditor were
+In addition to reports on algorithms, in the \gaudi Intel Profiling Auditor were
 added options that allow to skip unimportant regions of the code during
 profiling. Information about functions in those regions is not collected and,
 as a result, we get clearer reports and a decrease of total profiling time. For
@@ -371,24 +371,24 @@ first event in the event loop and stop it after the last event.
 
 \section{HLT Profiling Examples}
 
-In the previous section we demonstrated how Gaudi Intel Profiler Auditor can
-assist  in profiling Gaudi applications. The original motivation for creating
-this auditor was a profiling of HLT applications of the LHCb experiment. As was
+In the previous section we demonstrated how \gaudi Intel Profiler Auditor can
+assist  in profiling \gaudi applications. The original motivation for creating
+this auditor was a profiling of HLT applications of the \lhcb experiment. As was
 stated in the introduction, trigger programs are most sensitive to the event
 processing time. Therefore, a performance profiling is an essential tool in the
 hands of trigger's applications developers. In this section we show three
-examples of using \amp and Gaudi Intel Profiling Auditor to profile the Moore
-application --- a Gaudi based HLT framework at LHCb.
+examples of using \amp and \gaudi Intel Profiling Auditor to profile the \moore
+application --- a \gaudi based HLT framework at \lhcb.
 
 \subsection{Memory Allocation Functions}
 
-In the first example we profile a Moore program twice. The first time a program
+In the first example we profile a \moore program twice. The first time a program
 was executed with the standard memory allocation function {\it operator new\/}
 from {\it libstdc++\/} library:
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{profiler/fig10.png}
-\caption{Hotspot functions in the Moore application with the
+\caption{Hotspot functions in the \moore application with the
 standard memory allocation function.}
 \label{fig10}
 \end{figure}
@@ -398,7 +398,7 @@ tc\_new} from tcmalloc library~\cite{perftools}:
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{profiler/fig11.png}
-\caption{Hotspot function in the Moore application with the memory allocation functions from tcmalloc 
+\caption{Hotspot function in the \moore application with the memory allocation functions from tcmalloc 
 library.}
 \label{fig11}
 \end{figure}
@@ -411,10 +411,10 @@ tcmalloc library.
 \subsection{Measuring Profiling Accuracy}
 
 To check the CPU time measurement accuracy we compared the results obtained by
-the Gaudi Intel Profiler Auditor and by the Gaudi Timer Auditor. The Timer
+the \gaudi Intel Profiler Auditor and by the \gaudi Timer Auditor. The Timer
 Auditor proceed  in the same way as the Profiler Auditor --- it calculates the
 difference between the algorithm’s finish time and the time at the start of the
-algorithm. Unlike the Gaudi Intel Profiler Auditor, the Timer Auditor
+algorithm. Unlike the \gaudi Intel Profiler Auditor, the Timer Auditor
 calculates the exact time spent in the algorithm. So, we can assume a CPU time
 observed by the Timer Auditor as a reference value. The limitation of the Timer
 is that it creates reports only for algorithms times  and could not provide
@@ -426,7 +426,7 @@ absolute CPU time measured by the Profiler can differ from the time measured by
 the Timer auditor.  But the time distribution of all algorithms should stay the
 same in both auditors.  So, for the test we took a real HLT application and run
 it twice. The first time we used the Timer auditor and the second time the
-Gaudi Timer Auditor was used. Then we selected five hotspot algorithms and
+\gaudi Timer Auditor was used. Then we selected five hotspot algorithms and
 calculated their time distribution relative to the top hotspot algorithm. The
 process was repeated three times with different numbers of events: 10
 (Table~\ref{tab:tevents10}), 100 (Table~\ref{tab:tevents100}) and 1000 events
@@ -501,7 +501,7 @@ Figure~\ref{fig08} then the following pie chart report can be created.
 \begin{minipage}{\textwidth}
 \begin{center}
 \includegraphics[width=100mm]{profiler/fig12.png}
-\caption{\label{fig12}CPU Time percentage of top-level algorithms in the Gaudi sequence tree.}
+\caption{\label{fig12}CPU Time percentage of top-level algorithms in the \gaudi sequence tree.}
 \end{center}
 \end{minipage}
 \end{figure}
@@ -511,15 +511,15 @@ an exported  comma-separated-values (CSV) data and compiled it to javascript
 code that can be inserted to any dynamic web page.
 
 \section{Conclusions}
-In this chapter we presented the Gaudi Intel Performance Auditor --- a CPU
-profiling tool that is used in LHCb experiment at CERN. This tool integrates
-the functionality of \iamp performance profiler to the LHCb core framework
-Gaudi. The key advantage of the auditor is an ability to produce reports that
+In this chapter we presented the \gaudi Intel Performance Auditor --- a CPU
+profiling tool that is used in \lhcb experiment at CERN. This tool integrates
+the functionality of \iamp performance profiler to the \lhcb core framework
+\gaudi. The key advantage of the auditor is an ability to produce reports that
 use the framework's modules to present performance analysis results. Those
 reports help  developers to identify hotspots in the code and improve the
-application performance. Besides the reports, the Gaudi Intel Performance
+application performance. Besides the reports, the \gaudi Intel Performance
 Auditor provides the options that allow to control the \iamp supervisor’s
-process from the Gaudi applications.
+process from the \gaudi applications.
 
 The results have further strengthened our confidence in the profiling sampling
 technique. This technique gives us a reasonable overhead of total profiling
@@ -538,5 +538,5 @@ standardized profiling and regression tests. Software metrics can be created
 from the profiling results to monitor the changes in performance and to create
 reports on a regular basis if modifications lead to significant
 performance degradations. Therefore, for this purpose a system for systematic
-profiling is developing at \lhcb, where the Gaudi Intel Profiling Auditor
+profiling is developing at \lhcb, where the \gaudi Intel Profiling Auditor
 is one of the main parts.

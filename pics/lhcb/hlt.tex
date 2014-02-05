@@ -1,0 +1,47 @@
+\begin{figure}[H]
+  \setlength{\unitlength}{1mm}
+  \centering
+  \resizebox{\textwidth}{!}{
+  \begin{picture}(170,55)
+      \newsavebox{\hltbox}
+      \savebox{\hltbox}(50,55)[bl]{
+        \multiput(0,0)(30,0){2}{\line(0,1){55}}
+        \multiput(0,0)(0,55){2}{\line(1,0){30}}
+        \put(30,27){\vector(1,0){20}}
+      }
+      \put(0,0){\usebox{\hltbox}}
+      \put(5,50){\bf L0}
+      \put(5,35){$p_T^{\mu}$}
+      \put(5,29){$p_T^{\mu_1}$, $p_T^{\mu_2}$}
+      \put(5,23){$E_T$ - hadron}
+      \put(5,16){$E_T$ - electron}
+      \put(5,10){$E_T$ - $\gamma$, $\pi$}
+      \put(32,29){$1.1\mhz$}
+
+      \put(50,0){\usebox{\hltbox}}
+      \put(55,50){\bf HLT1}
+      \put(55,35){technical}
+      \put(55,29){single $e$}
+      \put(55,23){1 track all}
+      \put(55,16){1 track $\mu$}
+      \put(55,10){$\mu$, $\mumu$}
+      \put(82,29){$50\khz$}
+
+
+      \put(100,0){\usebox{\hltbox}}
+      \put(105,50){\bf HLT2}
+      \put(105,40){technical}
+      \put(105,34){excotics}
+      \put(105,28){EW}
+      \put(105,22){B2HH}
+      \put(105,16){radiative}
+      \put(105,10){charm}
+      \put(105,4){\mumu}
+      \put(132,29){$5\khz$}
+      \put(152,27){\bf Storage}
+  
+  \end{picture}
+  }
+\caption{Schematic overview of the LHCb trigger.}
+\label{fig:hlt}
+\end{figure}
