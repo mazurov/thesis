@@ -84,7 +84,8 @@ time value is calculated by counting the number of  a function's appearances at
 the top of a call stack. This means that stack sampling is a statistical method
 and does not provide a 100\% accurate measurement. However, for a large number
 of samples the sampling error does not have a serious impact on the accuracy of
-analysis. More details about sampling accuracy will be provided in section 2.2.
+analysis. More details about sampling accuracy will be provided
+in~\Cref{sec:accuracy}.
 
 \amp also supports the hardware event-based sampling and provides advanced
 metrics based on event counters inside a processor. Reports that use those
@@ -409,7 +410,7 @@ observed if we replace standard allocation functions with function from
 tcmalloc library.
 
 \subsection{Measuring Profiling Accuracy}
-
+\label{sec:accuracy}
 To check the CPU time measurement accuracy we compared the results obtained by
 the \gaudi Intel Profiler Auditor and by the \gaudi Timer Auditor. The Timer
 Auditor proceed  in the same way as the Profiler Auditor --- it calculates the
