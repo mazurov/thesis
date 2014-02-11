@@ -1,8 +1,8 @@
-\chapter{Review of production mechanism and experimental status}
+\chapter[Review]{Review of production mechanism and experimental status}
 
-The Standard Model (SM) is the theory which describes the electromagnetic,
-weak and strong interactions between elementary particles. The model describes
-a wide variety of subatomic phenomena involving known elementary particles and
+The Standard Model (SM) is the theory which describes the electromagnetic, weak
+and strong interactions between elementary particles. The model describes a
+wide variety of subatomic phenomena involving known elementary particles and
 has been confirmed with high precision measurements. This theory is based on
 the quark model started in the 1960s\cite{GellMann:1964nj,Zweig:1981pd}, few
 years before the experimental confirmation of the existence of quarks. The
@@ -10,19 +10,33 @@ theory says that quarks are elementary particles which interact due to the
 strong interaction. Because of a phenomenon called color confinement, they are
 never been directly observed,  but can be found within composite particles
 called hadron. There are two types of hadrons named as baryons (qqq), made of
-three quarks or anti- quarks, and mesons ($q\bar{q}$), made of one quark and
+three quarks or anti-quarks, and mesons ($q\bar{q}$), made of one quark and
 anti-quark. The quark model is composed of 6 different types of quarks known as
 flavors: up (u), down (d), strange (s), charm (c), bottom or beauty (b), top or
-truth (t). 
+truth (t).
 
+Quarkonia, i.e. the bound states of heavy quark-antiquark pairs, are
+particularly interesting in this context, since they provide a testing ground
+of QCD in a relatively simple and calculable environment. Also, production of
+quarkonia at LHC represents an interesting check of production mechanisms and
+models. Toponia ($t\bar{t}$) states are expected to decay very quickly, due to
+the heavy top quark mass, and have never been observed. The experimentally
+established quarkonia consist therefore of charmonium ($c\bar{c}$) and
+bottomonium ($b\bar{b}$) states.
 
-There is a wide variety of bottomonium states, each differing from other by quantum
+The $\jpsi$ meson, made up of $c\bar{c}$, was the first observed quarkonium
+state\cite{richter1974,ting1974}, with a mass around 3.1GeV and narrow width. The analogous 
+bound state in the $b$ sector was established with the observation of the 
+$\Upsilon(1S)$ meson in 1977 \cite{lederman1977}. 
+There is a wide variety of quarkonium states, each differing from other by quantum
 numbers: the principal quantum number ($n$), the relative angular momentum
 between the quarks ($L$), the spin combination of the two quarks ($S$) and the total
 angular momentum ($J$) with $J = L + S$. In particle physics, the notation $J^{PC}$ is
 often used, where $P$ is the parity number and $C$ is the charge conjugation number.
-For the bottomonium states, they are defined as $P=(-)^{L+1}$ and $C=(-)^{L+S}$.
+For the quarkonium states, they are defined as $P=(-)^{L+1}$ and $C=(-)^{L+S}$.
+Table \ref{tab:quarkonium} shows the properties of the quarkonium states. 
 
+\input{tables/review/quarkonium}
 \input{pics/introduction/bottomonium}
 
 
@@ -45,3 +59,220 @@ momentum $\Delta L  = \pm 1$ but not the spin $\Delta S = 0$. The magnetic
 dipole transition is a next to leading order transition and therefore is very
 rare. This transition changes the spin $\Delta S = \pm 1$ but not the relative
 angular momentum $\Delta L = 0$.
+
+\section{The quarkonium mass spectrum}
+
+Many theoretical models have been developed to describe quarkonium systems.
+These models can be roughly split in two classes, based respectively on Lattice
+QCD calculations and phenomenological approaches. The simplest and most
+frequently used phenomenological approach is the {\it non-relativistic potential model}, an effective theory in which the quark move non-
+relativistically inside hadrons. Similarly to the positronium case, the system
+involves a typical velocity $v$ given by the strong coupling constant
+$\alpha_s$, evaluated at a scale corresponding to the typical size of the
+bound state.
+
+\begin{equation}
+v \approx \alpha_s(1/r^2), r \approx 1/mv
+\end{equation}
+
+Being $v$ larger than $\alpha_s(m^2)$, higher-order corrections to the 
+non-relativistic approximation are potentially more important than higher-order
+perturbative corrections. So far the theoretical calculations of charmonium and
+bottomonium and their spectra measured by many experiments suggest that the
+potential of quarkonium possesses a radial dependence of an approximately
+Coulomb form at small distances due to gluon exchange
+
+\begin{equation}
+V(r) \approx -{\frac{4}{3}}{\frac{\alpha_s(1/r^2)}{r}}   (r\rightarrow 0)
+\end{equation}
+\noindent and is confining at large distances due to the increasing strength 
+of the coupling
+\begin{equation}
+V(r) \approx kr (r\rightarrow \infty)
+\end{equation}
+
+\noindent where k is the string tension and the factor of 4/3 arises from the
+SU(3) colour factors. Several models have been widely used for explaining the
+quarkonium spectroscopy. Although these potentials have different asymptotic
+behaviours at small and large distances, they coincide with each other in the
+region $0.1 fm < r <1 fm$, where $r$ is the average distances between heavy quarks
+in the bound systems. Experimental measurements can be used as inputs to
+understand the exact shape of the strong potential. For instance, the Cornell
+model
+
+\begin{equation}
+V_C(r) = -{\frac{4}{3}}{\frac{\alpha_s}{r}} + {\frac{r}{a^2}} + c_0
+\end{equation}  
+
+describes the fine and hyperfine structures of charmonium levels in the leading
+non-relativistic treatment. By using charmonium data, the coefficients are
+determined to be $\alpha_s = 0.36$, $a=2.34 GeV^{-1}$, $c_0 = -0.25 GeV$, $m_c
+= 1.84\gev$.
+
+Energy levels and wave functions of the quarkonium system are obtained by solving 
+the non-relativistic Schr\"odinger equation in terms of the constituent masses and the 
+potential function. The wavefunction, $\Psi(r) = \Psi_{nL}(r)Y_{Lm}(\theta,\phi)$, with 
+$\Psi_{nL}(r)$ and $Y_{Lm}(\theta,\phi)$ being the radial and orbital parts of the wavefunction, 
+gives predictions of quarkonium properties. The radial wavefunctions of the $\jpsi$ and 
+$\psi(2S)$ systems from various potential models are shown in Fig.~\ref{fig:psipot}. 
+Up to 30\% differences can be noticed at small values of $r$. 
+
+\begin{figure}
+\center
+\includegraphics[width=300px]{figs/review/psipot.png}
+\label{fig:psipot} 
+\caption{Radial Wave functions for the $J/\psi$ (left) and $\psi(2S)$ (right) for different 
+potential models: Buchm\"uller and Tye (BT), Cornell (COR), Logarihmic (LOG) and Power (POW). }
+\end{figure} 
+
+
+\section{Quarkonium production}
+
+The production of quarkonium states can be split in two parts: the production
+of a heavy quark-antiquark pair in the regime of perturbative QCD, and the
+formation of a bound state, which is driven by non-perturbative QCD. Many
+theoretical models have been proposed to interpret the quarkonium production
+rates measured by experiments.
+
+\subsection{Colour Singlet Model}
+
+The leading order diagrams for the production of a $Q\bar{Q}$̄ pairare shown in
+Fig\ref{fig:prod}. Quark-antiquark annihilation produces a pair in an octet
+state, while gluon-gluon fusion can give a  pair in either a singlet or an
+octet state, mainly the latter. The Colour Singlet Model (CSM) \cite{CSM}
+assumes that a given quarkonium state can only be produced from a heavy quark
+pair with the same quantum numbers. In particular, the the quark pair must have
+the same spin and colour state as the final quarkonium state, i.e. colour
+neutral. The formation of a quarkonium bound state is parameterised by non-
+perturbative theory in the CSM into one single term, assuming the constituent
+quarks are at rest in the meson frame ({\it{ static approximation}}. The short-
+distance cross section for the whole process can be written as
+
+\begin{equation}
+d{\hat{\sigma}}(ij\rightarrow H + X) = d{\hat{\sigma}}(ij\rightarrow Q{\bar{Q}}[n^{2S+1}L_J + X) 
+|\Psi^{(k)}_{nL}(0)|^2
+\end{equation}
+
+\noindent where the radial wave functions at the origin can be extracted from
+the non-relativistic potential models. The wave function $\Psi_{nL}(0)$ is zero
+for P-wave states (e.g. $\chi$ states). For these states, the next term in the
+amplitude expansion $\Psi'_{nL}(0)$, is used. At order $\alpha_s^2$ there is
+only one diagram that contributes for the production of $\eta$ and $\chi$
+states. Due to C-parity conservation, the production of $J/\psi$ and $\Upsilon$
+states from gluon fusion at leading order is forbidden, and it is described by
+an $\alpha_s^3$ term in the CSM. Therefore, this model predicts that the
+$\jpsi$ production cross section than the $\chi_c$ one, which is in
+disagreement with data.
+
+\subsection{Colour Octet Model}
+
+The Colour Octet Model (COM) \cite{COM} extends the CSM calculation and
+mitigates its shortcomings when compared to data. The COM allows the heavy
+quark pair produced in the hard process to have different quantum numbers and
+evolve into a given quarkonium state through radiation of soft gluons during
+hadronisation. The perturbative hard process is separated from the non-
+perturbative dynamics, in which the heavy bound states are inherently non-
+relativistic. The latter process can be described in the formalism of NRQCD
+(non-relativistic QCD) where a production cross section of a heavy quarkonium
+state H can be expressed as
+
+\begin{equation}
+d\sigma ( i j \rightarrow H + X ) = \sum_{\cal{Q}} d{\hat{\sigma}}(Q{\bar{Q}}[{\cal{Q}}] + X') 
+<O^H({\cal{Q}})>
+\end{equation}
+
+\noindent where $d{\hat{\sigma}}(Q{\bar{Q}}[{\cal{Q}}] + X')$ describes the
+short-distance production of a$Q{\bar{Q}}$ ̄ pair,$Q{\bar{Q}}̄{\cal{Q}}]$ is
+the Fock state component of the quarkonium wave function in the colour, spin,
+and angular momentum state ${\cal{Q}} =^{2S+1} L_J^{[1,8]}$, and
+$<O^H({\cal{Q}})>$ is the vacuum expectation value of the operator describing
+the hadronisation into the final state H. Using NRQCD velocity scaling rules,
+the quarkonium state can be expanded in terms of the heavy quark velocity $v$,
+for example, the S-wave vector meson can schematically be written as:
+
+\begin{equation}
+|\psi_Q> = O(1)|Q{\bar{Q}}[^3S_1^{(1)}]> + O(v)|Q{\bar{Q}}[^3P_J^{(8)}]g> + \\
+O(v^2)|Q{\bar{Q}}[^1S_0^{(8)}]g> + \\
+O(v^2)|Q{\bar{Q}}[^3S_1^{(1,8)}]gg> + O(v^2)|Q{\bar{Q}}[^3D_J^{(1,8)}]> + ...
+\end{equation}   
+
+\noindent where the lowest order in $v$ corresponds to the CSM case. For P-wave
+quarkonia, contributions from colour-octet S-wave states are at the same order
+in $v$ as those from the leading colour-singlet P-wave states. Although the
+parameters of the non-perturbative matrix elements in NRQCD are free, they are
+independent of the hard process, thus can be extracted from multiple
+experiments. The application of NRQCD in the COM model provides an acceptable
+description of the differential $\jpsi$ production cross section to CDF data.
+For the $\Upsilon$ production, corrections at low $p_T$ are required.
+
+\section{Production of \chib mesons at LHC}
+
+Recent studies by ATLAS, D0 and LHCb \cite{chibATL,chibD0,chibLHCb} allowed to
+observe radial excitations of the P-wave $\chi_b$ states in radiative
+transitions to the S-wave $\Upsilon$ states. Also, the $\chi_b(3P)$ states,
+were observed for the first time, even though the invariant mass resolution was
+not adequate to separate the different spin states.
+
+The main contribution to the production processes at the \tev scale is due to
+gluon fusion. As seen before, the production of quarkonia can be factorized
+into two parts, namely the determination of the transverse momentum of the
+final state using the initial parton distribution function, and the
+hadronization process. Vanishing production cross-sections in gluon fusion for
+$|^3 S_1> (1^{--})$ states, due to charge parity conservation, can be avoided
+by additional gluon emission in the final state. However, the predicted high
+$p_T$ spectrum is in contradiction with experimental data. For P-wave mesons,
+it is difficult to obtain the transverse momentum distribution of final states.
+In addition, the Landau-Yang theorem forbids the production of axial mesons
+such as the $|^3P_1>$ state, from two massless gluons.
+
+The authors of Ref.~\cite{chibprod} showed that these problems can be overcome
+by considering next to leading order terms, namely the emission of a single
+hard gluon, mostly from the initial state, see Fig.~\ref{chibprod_fig1}.
+
+\begin{figure}
+\center
+\includegraphics[width=300px]{figs/review/chibprod_fig1.pdf}
+\label{chibprod_fig1} 
+\caption{From Ref.~\cite{chibprod}: Feynman diagrams of the $gg\rightarrow \chi_b g$ NLO 
+process. The diagrams in the top row give both CS and CO contributions, the ones in the 
+bottom row result only in CO contributions.}
+\end{figure} 
+
+In this way, all three P-wave states can be produced. The color singlet model
+can accomodate the observed $p_T$ dependence of production cross-section.
+However, the absolute normalization is several time smaller than measured. This
+discrepancy can be solved for the $\chi_c$ spectrum (see \Cref{chibprod_fig2})
+by considering color-octet contributions.
+
+\begin{figure}
+\center
+\includegraphics[width=300px]{figs/review/chibprod_fig2.pdf}
+\label{chibprod_fig2} 
+\caption{From ~\cite{chibprod}: Differential production cross section for $\chi_c$ mesons, 
+as a function of $p_T$. The different lines correspond to CS (dotted), two different CO 
+contributions (dashed and dot-dashed), total (solid). Experimental points are taken from a 
+CDF report~\cite{CDFchic}.}
+\end{figure} 
+
+Moreover, predictions for the production cross sections of $\chi_b$ states are
+given (see \Cref{chibprod_fig3}).
+
+\begin{figure}
+\center
+\includegraphics[width=300px]{figs/review/chibprod_fig3.pdf}
+\label{chibprod_fig3} 
+\caption{From Ref.~\cite{chibprod}: Transverse momentum distribution for $\chi_b$ states at 
+$\sqrt{s}=8TeV$.}
+\end{figure} 
+
+Also, the ratio between different spin states as a function of transverse
+momentum gives a good description of $\chi_c$ data and can be used to infer the
+corresponding ratio for $chi_b$ states, see \Cref{chibprod_fig4}.
+
+\begin{figure}
+\center
+\includegraphics[width=300px]{figs/review/chibprod_fig4.pdf}
+\label{chibprod_fig4} 
+\caption{From~\cite{chibprod}: Transverse momentum distribution for the ratio of 
+production cross sections for $\chi_2$ and $\chi_1$ states.}
+\end{figure} 
