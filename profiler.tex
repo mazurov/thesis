@@ -31,7 +31,7 @@ Kruse and Karol Kruzelecki in their work ``Modular Software Performance
 Monitoring''~\cite{modular}. They conclude that instead of profiling the
 application as a whole it would be better to divide it into modules and profile
 those modules separately. In general terms, a module can be defined as an
-application’s structural component that is used to group logically related
+application's structural component that is used to group logically related
 functions.  Grouping performance results by module allows a better insight into
 where the performance issues are coming from. Since each module is under the
 responsibility of a specific developer, the provided reports can be delivered
@@ -136,12 +136,12 @@ In this section we review essential profiling reports that are available in
 \amp. These reports can be obtained either from {\it amplxe-gui} or {\it
 amplxe-cl tool}, but for short we present only GUI screenshots.
 
-An ordered function’s CPU time usage report is a basic report of almost at all
+An ordered function's CPU time usage report is a basic report of almost at all
 performance profilers (Figure~\ref{fig01}).
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{profiler/fig01.png}
-\caption{Function’s CPU Time report. The first column contains
+\caption{Function's CPU Time report. The first column contains
 function names. The second column is a CPU time usage and the last column
 contains the names of the shared libraries where the functions are defined.}
 \label{fig01}
@@ -261,7 +261,7 @@ functions, classes, shared libraries, threads, but it has one disadvantage.
 the central point of any framework application, all major event processing
 occurs there. In principle, a general task of framework users is just to write
 algorithms that solve a problem and usually nothing more. So, if the profiler
-could generate a report that can group function’s CPU usage by algorithm then
+could generate a report that can group function's CPU usage by algorithm then
 application developers could look to the profiling result from a new point of
 view. This point of view can help to reveal previously invisible hotspots. In
 order to provide such report the Gaudi Intel Profiler Auditor was developed.
@@ -274,7 +274,7 @@ to the target report. In order to use the library from user applications, the
 public User API is provided in \amp. The API enables to control the data
 collection process and set marks during the execution of the code. The
 possibility to mark code regions at runtime is the striking feature of our new
-profiling tool, because a CPU usage in the region between algorithm’s start and
+profiling tool, because a CPU usage in the region between algorithm's start and
 finish points is what we need for the report that group functions by algorithm.
 Event API is a part of the User API  that is in charge of marking.
 
@@ -296,7 +296,7 @@ from start to end. If this API is not called, the user event appears in the Time
 \subsubsection{Implementation}
 
 An auditor is a good component for implementing the required profiling tool. In
-this case, we do not need to modify the algorithm’s code and need only to write
+this case, we do not need to modify the algorithm's code and need only to write
 two callback functions: at algorithm start and finish. In order to generate the
 target report those functions need to call Event API functions of \amp.
 
@@ -414,13 +414,13 @@ tcmalloc library.
 To check the CPU time measurement accuracy we compared the results obtained by
 the \gaudi Intel Profiler Auditor and by the \gaudi Timer Auditor. The Timer
 Auditor proceed  in the same way as the Profiler Auditor --- it calculates the
-difference between the algorithm’s finish time and the time at the start of the
+difference between the algorithm's finish time and the time at the start of the
 algorithm. Unlike the \gaudi Intel Profiler Auditor, the Timer Auditor
 calculates the exact time spent in the algorithm. So, we can assume a CPU time
 observed by the Timer Auditor as a reference value. The limitation of the Timer
 is that it creates reports only for algorithms times  and could not provide
 results for a low level of granularity (for functions or code instructions).
-Therefore, only the algorithm’s CPU times were compared.
+Therefore, only the algorithm's CPU times were compared.
 
 Since the VTune Amplifier XE instruments the code before execution, the
 absolute CPU time measured by the Profiler can differ from the time measured by
@@ -494,7 +494,7 @@ confident that the Profiler can identify the hotspots with the high precision.
 In the second example is demonstrated how custom reports can be created. Basic
 profiling reports can be picked up in
 \amp, but if a custom report is required then a user tool needs to be created .
-This application can get the CPU usage data from VTune™ Amplifier XE by using
+This application can get the CPU usage data from \iamp XE by using
 its export function. For example, if we export CPU Time data that is shown on
 Figure~\ref{fig08} then the following pie chart report can be created.
 
@@ -519,7 +519,7 @@ the functionality of \iamp performance profiler to the \lhcb core framework
 use the framework's modules to present performance analysis results. Those
 reports help  developers to identify hotspots in the code and improve the
 application performance. Besides the reports, the \gaudi Intel Performance
-Auditor provides the options that allow to control the \iamp supervisor’s
+Auditor provides the options that allow to control the \iamp supervisor's
 process from the \gaudi applications.
 
 The results have further strengthened our confidence in the profiling sampling
