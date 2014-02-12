@@ -40,6 +40,7 @@
 \usepackage{longtable} % only for template; not usually to be used in PAPERs
 \usepackage{cleveref}
 \usepackage[toc,page]{appendix}
+\usepackage[chapter]{tocbibind}
 \input{symbols-def}
 
 \newcommand{\systpol}{\ensuremath{\mathrm{\,(syst.pol)}}\xspace}
@@ -65,13 +66,15 @@
 % =============================================================================
 % Customize page headers
 \usepackage{fancyhdr}
-\pagestyle{fancyplain}
-
-% \renewcommand{\headrulewidth}{0.4pt}
-% \fancyfoot[L]{\today}
-% \fancyfoot[C]{Version 0.1}
-% \fancyfoot[R]{\thepage}
-% \renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+% \fancyhead{} % clear all header fields
+% \fancyhead[LE,RO]{\small \slshape \rightmark}
+% \fancyhead[LO,RE]{\small \slshape \leftmark}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyfoot[L]{\today}
+\fancyfoot[C]{Version 2.0}
+\fancyfoot[R]{\thepage}
+\renewcommand{\footrulewidth}{0.4pt}
 
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -90,6 +93,18 @@
 %%%%%  Table of Content   %%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Uncomment next 2 lines if desired
+\lhead{\leftmark}
+\rhead{\rightmark}
+
+\makeatletter
+\renewcommand\tableofcontents{%
+    \section*{\contentsname
+        \@mkboth{%
+%           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}% DELETED
+           \MakeUppercase\contentsname}{}}% ADDED
+    \@starttoc{toc}%
+    } 
+\makeatother
 \tableofcontents
 %\cleardoublepage
 
@@ -132,9 +147,10 @@
 \input{appendix}
 
 % \renewcommand{\bibname}{References}%  Change the section name from "Bibliography" to "References"
-
 \setboolean{inbibliography}{true}
 \bibliographystyle{bib/LHCb}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
 \bibliography{bib/main,bib/perf,bib/LHCb-PAPER,bib/LHCb-CONF,bib/LHCb-DP}
 
 \input{acknowledgements}
