@@ -3,47 +3,51 @@
 
 In this study, the photon in \chib decay is measured by the calorimeter system.
 Another approach is to look at photons that convert to an electron-positron
-(\epem) pair. Converted photons provides a better resolution, since the energy
-resolution using the tracking stations is better than the resolution obtained
-by the calorimeter system. This is due to the fact that the \epm measurements
-provide a better precision on the photon momentum and energy than in the
-unconverted case. The conversion is required to happen before the magnet in
-order to be reconstructed with tracks. Furthermore, if the photon converts too
-early, the \epm has more chance to radiate energy, which leads to the worse
-track reconstruction and smaller energy resolution. Therefore, only photons
-converting before the magnet and after the VELO are used. So, in this study
-unconverted photons are used since it provides much larger statistic and allows
-to analyze more decays in wide $\Upsilon$ transverse momentum ranges.
+(\epem) pair. Converted photons provide a better invariant mass resolution and would 
+allow to separate mass peaks due to close resonances, since the 
+\epm momentum 
+resolution obtained from the tracking stations is better than the photon energy resolution obtained
+by the calorimeter system. However, conversions should be required to happen before the magnet in
+order to reconstruct the charged tracks. Furthermore, if the photon converts too
+early, the \epm has more chance to radiate energy, which leads to worse
+track reconstruction and worse energy resolution. Therefore, only photons
+converting before the magnet and after the VELO should be used, which severely limits 
+the size of the available sample and the decays which can be analyzed. In this study 
+unconverted photons are used, in order to obtain a much larger data sample and 
+analyze more decays in a wide range of $\Upsilon$ transverse momentum. 
 
 %% ============================================================================
 \subsection{Selection}
 \label{sec:chib:selection}
 
 The selected $\Upsilon$ candidates  are combined with photon candidates to form
-\chib candidates. Well reconstructed photons are selected by requiring the
-transverse momentum greater than 600 \mevc. To further suppress the background
+\chib candidates. Well reconstructed photons are selected by requiring their 
+transverse momentum to be greater than 600 \mevc. To further suppress background, 
 the cosine of the angle of the photon direction in the center-of-mass of the
 $\mumu\gamma$ system with respect to the momentum of this system, is required to
 be greater than zero. An additional loose cut on the photon confidence level is
-required to be greater than 0.01.
+required to be greater than 0.01. This confidence level is computed starting from the distributions 
+of calorimetric variables which are sensitive to photons, by computing likelihoods under different particle 
+hypotheses, and taking   
+the ratio of the likelihood for a photon hypothesis divided by the sum of likelihoods for all hypotheses. 
 
 The criteria for event selection with a reconstructed photon is summarized in
 Table~\ref{tab:chib:selection:photons}:
 
 \input{tables/chib/selection_photons}
 
-To separate decays by different $\Upsilon$ channels the cut on dimuon mass is
+To separate decays into different $\Upsilon$ channels, cuts on dimuon invariant mass are 
 applied as shown in Table~\ref{tab:chib:selection:window}:
 
 \input{tables/chib/selection_window}
 
 To avoid \Y2S and \Y3S contamination, the mass ranges of the \Y2S and \Y3S are
-asymmetric respect to the nominal masses.
+asymmetric with respect to the nominal masses.
 
 The $\Upsilon$ selection cuts
-~(Table~\ref{tab:upsilon:selection:study:summary}), cuts  on $\gamma$
-~(Table~\ref{tab:chib:selection:photons}) and limit on dimuon mass
-~(Table~\ref{tab:chib:selection:window}) are used for obtaining \chib yields
+~(Table~\ref{tab:upsilon:selection:study:summary}), the cuts  on $\gamma$
+~(Table~\ref{tab:chib:selection:photons}) and dimuon mass  
+~(Table~\ref{tab:chib:selection:window}) are used to obtain \chib yields
 using a fit model which is described in the next section.
 
 
@@ -55,16 +59,16 @@ This section describes the common properties of the fit model that is used for
 obtaining yields in each of the \chib decays. The results of the fits are
 given in the following sections.
 
-The efficient way to obtain \chib signal yields is by fitting event candidates
+The \chib signal yields are obtained by fitting event candidates
 in the distribution of invariant mass difference $m(\mumu\gamma) - m(\mumu)$.
-In this case the bias and resolution effects from the $\Upsilon$ reconstruction
-are suppressed. For clearness, the PDG mass of the corresponding $\Upsilon$
-particles is added to the mass difference value in each plot.
+In this case any biases and resolution effects from the $\Upsilon$ reconstruction
+are cancelled at first order. For clearness, the PDG mass of the corresponding $\Upsilon$
+particle is added to the mass difference value in each plot.
 
-The $\chi_b(jP)$ (j=1,2,3) signals are composed of three parts: $\chi_{b0}(jP)$,
-$\chi_{b1}(jP)$, $\chi_{b2}(jP)$. The $\chi_{b0}$ signals is hard to detect
+The $\chi_b(jP)$ (j=1,2,3) signals are the sum of three contributions, due to $\chi_{b0}(jP)$,
+$\chi_{b1}(jP)$, $\chi_{b2}(jP)$. The $\chi_{b0}$ meson is difficult to detect
 because it has a low radiative branching ratio in comparison with the other two
-parts. So the $\chi_{b0}$ states were excluded from this study and the fit
+mesons. So the $\chi_{b0}$ states were excluded from this study and the fit
 model.
 
 To determine the $\chi_b$ signal yields, an unbinned maximum likelihood fit to
@@ -91,16 +95,17 @@ CB(x) = N \times
 \label{eq:cb}
 \end{equation}
 
-The CB is similar to gaussian distribution, but has an asymmetric tail. This
+As already mentioned, the CB is similar to a gaussian distribution, but has an asymmetric tail. This
 function has five parameters: N, $\mu$, $\sigma$, $\alpha$ and $n$, where
 parameters $\mu$ and $\sigma$ have the same meaning as for gaussian. Parameters
 $\alpha$ and $n$ describe the tail behavior: $\alpha$ controls the tail start
-and $n$ corresponds to the decreasing power of the tail. All three parameters
-$N$, $\alpha$ and $n$ contribute to the amplitude.
+and $n$ corresponds to the decreasing power of the tail. 
+%%% CB WHAT DOES THIS MEAN?!? All three parameters
+%%%                                                             $N$, $\alpha$ and $n$ contribute to the amplitude.
 
 The number of CrystalBall functions and the order of the polynomial depend on
 the decay under study and are described in the section corresponding to that
-decay.
+specific decay.
 
 
 The $\alpha$ and $n$
@@ -142,29 +147,29 @@ mass difference which is fixed in the fit; $\Delta
 m_{\chi_{b1,2}(3P)}^{theory}$ is fixed to the theoretical predicted mass
 difference in 12\mevcc~\cite{Motyka:1997di}. The $\lambda$ parameter depends on
 the $p_T(\Upsilon)$ range and is fixed to the value that is based on the
-theoretical prediction discussed in Section~\ref{sec:ratio}. The $k$ 
+theoretical prediction discussed in Section~\ref{sec:ratio}. The parameter $k$ 
 is the ratio between the resolution of $\chi_{b1}$ and $\chi_{b2}$ signals.
 This parameter is equal to $1.05$ for $\chi_{b1,2}(1P)$ signals and equal to 1
 for $\chi_{b1,2}(2,3P)$ signals.
 
-To reduce fit
-errors, the width of each CB function ($\sigma$) is fixed to the value obtained
-from simulation~(Section~\ref{sec:mc}).
+The width of each CB function ($\sigma$) is fixed to the value obtained
+from simulation~(Section~\ref{sec:mc}), in order to improve fit convergence 
+and reduce uncertainties. 
 
-As was said in the introduction (\Cref{sec:introduction}) the \chibThreeP  was
-recently observed and the mass of this meson is not well known.
-So in this study this mass is fixed to 10.508\gevcc, which was measured in
-\Cref{sec:chib:ups3s:fit}.
+As already mentioned in the introduction (\Cref{sec:introduction}), the \chibThreeP  was
+recently observed, but the mass of this meson was not precisely measured. 
+Section \Cref{sec:chib:ups3s:fit} presents a determination of the \chibThreeP mass, which 
+was consequently fixed to the measured value of 10.508\gevcc in these studies. 
 
 %% ============================================================================
 \subsection{\texorpdfstring{\chib}{xb} yields in
 \texorpdfstring{$\chib \to \Y1S \gamma$}{xb -> Y\(1S\) gamma } decays}
 \label{sec:chib:ups1s:fit}
 
-If you don't take in account $\chi_{b0}$ decays, the \Y1S could be produced in radiative decays
+If $\chi_{b0}$ decays are neglected, the \Y1S can be produced in radiative decays
 of six \chib particles: $\chi_{bi}(jP) \to \Y1S \gamma$ (i=1,2; j=1,2,3). So
 the sum of six CB functions is used to determine \chib signals in these decays.
-The mass of \chiboneOneP ($\mu_{\chiboneOneP}$) is a free parameter and  other
+The mass of \chiboneOneP ($\mu_{\chiboneOneP}$) is taken as free parameter in the fit, and  other
 parameters are constrained by:
 
 \begin{equation}
@@ -173,11 +178,11 @@ parameters are constrained by:
 \mu_{\chiboneThreeP} = \mu_{\chiboneOneP} + \Delta m_{\chi_{b1}(3P)}, \\
   \end{aligned}
 \end{equation}
-\noindent where $\Delta m_{\chi_{b1}(2P)}^{PDG}$ is a difference between PDG masses of
-\chiboneTwoP and \chiboneOneP. The $\Delta  m_{\chi_{b1}(3P)}$ is a difference
-between masses of \chiboneThreeP and \chiboneOneP, where the mass of
-\chiboneThreeP was taken from measurement conducted in this
-study~(Section~\ref{sec:chib:ups3s:fit}). The parameters  $\Delta
+\noindent where $\Delta m_{\chi_{b1}(2P)}^{PDG}$ is the difference between the PDG masses of
+\chiboneTwoP and \chiboneOneP. The $\Delta  m_{\chi_{b1}(3P)}$ parameter is the difference
+between the masses of \chiboneThreeP and \chiboneOneP, where the mass of
+\chiboneThreeP was taken from the measurement performed in this 
+thesis~(Section~\ref{sec:chib:ups3s:fit}). The parameters  $\Delta
 m_{\chi_{b1}(2P)}^{PDG}$ and $\Delta  m_{\chi_{b1}(3P)}$ are fixed in the fit.
 
 The order of the background polynomial in~\Cref{eq:bernstein} depends on the
@@ -198,18 +203,17 @@ Pull = \frac{N_{data} - N_{model}}{\sqrt{N_{data}}},
 \end{equation}
 \noindent where $N_{model}$ is the expected number of events in a bin from
 the fit function and $\sqrt{N_{data}}$ is the statistical uncertainty on the
-number of event in a bin. If a fit has most pull values  are normally
-distributed around 0 in the range between -1 and 1, it is indicated as a good
-fit.
+number of events in a bin. Pull values  for good fits are normally
+distributed around zero, with a standard deviation of 1. 
 
 
 \input{pics/chib/ups1s_nominal}
 \input{tables/chib/ups1s_nominal}
 
 \Cref{tab:chib:ups1s:nominal} shows that the measured \chiboneOneP mass
-has a nice agreement with the PDG value $9892.78 \pm 0.26 \pm 0.31 \mevcc$. In
-the further analysis this mass was fixed to 9.887 \gevcc which which was
-measured on combined 2011 and 2012 dataset in $6<p_T^{\Y1S}<40$ range.
+nicely agrees with the PDG value $9892.78 \pm 0.26 \pm 0.31 \mevcc$. In
+the following, this mass was fixed to 9.887 \gevcc which is the value 
+measured on the combined 2011 and 2012 datasets in the range $6<p_T^{\Y1S}<40\gevc$.
 
 
 \Cref{fig:chib:ups1s:yields} illustrates the number of signal events as
@@ -218,14 +222,14 @@ normalized by bin size and luminosity are shown in
 \Cref{fig:chib:ups1s:yields_scaled}. The \chibOneP and \chibThreeP yields
 are smoothly decreasing functions of $p_T^{\Y1S}$, as expected. Differences between 7 and 8\tev
 data, due to different production cross sections, can be seen for the
-$\chi_b(1P)$ state, while they are washed out by statistical fluctuation for
+$\chi_b(1P)$ state, while they are washed out by statistical fluctuations for
 the other states. \Cref{tab:chib:ups1s:fits} in Appendix summarizes the
 obtained results.
 
 \input{pics/chib/ups1s_yields}
 
-The momentum scaling correction was applied, but a smooth variation of the
-\chiboneOneP mass is seen as a function of transverse momentum (see
+Even though a correction on the momentum scale was applied on data, a smooth variation of the
+\chiboneOneP mass is observed as a function of transverse momentum (see
 Figure~\ref{fig:chib:ups1s:mean}). This effect can be explained by the unknown
 ratio between the number of \chiboneOneP and \chiboneTwoP candidates.
 Figure~\ref{fig:chib-1s:m1p} shows how the measured mass depends on this ratio
@@ -237,21 +241,21 @@ Figure~\ref{fig:chib-1s:m1p} shows how the measured mass depends on this ratio
 
 %% ===========================================================================
 \subsection{\texorpdfstring{\chib}{xb} yields in
-	\texorpdfstring{$\chib \to \Y2S \gamma$}{xb --> Y(2S) gamma} decays}
+    \texorpdfstring{$\chib \to \Y2S \gamma$}{xb --> Y(2S) gamma} decays}
 \label{sec:chib:ups2s:fit}
 
 The fit was performed in the mass interval from 10.16 \gevcc to 11.04 \gevcc.
 The  \chiboneTwoP peak width depends on $p_T^{\Y2S}$ interval and is fixed to
 the value obtained from simulation (Section~\ref{sec:mc}) without any scaling.
 The \chiboneThreeP peak width is fixed to \chiboneTwoP peak width scaled by
-1.65.
+1.65, as observed on simulation. 
 
 
 The order of the background polynomial in~\Cref{eq:bernstein} is 3 for all
 intervals of \Y2S transverse momentum.
 
 
-\Cref{fig:chib:ups2s:nominal} shows the mass distribution in transverse
+\Cref{fig:chib:ups2s:nominal} shows the mass distribution in the transverse
 momentum range $18 < p_T^{\TwoS} < 40 \gevc$. \Cref{tab:chib:ups2s:nominal}
 details the corresponding fit parameters.
 
@@ -262,8 +266,8 @@ details the corresponding fit parameters.
 about 5 \mevcc less than the PDG value $10255.46  \pm 0.22 \pm 0.50 \mevcc$.
 The same difference is also observed in the smaller $p_T^{\Y2S}$ ranges
 (Figure~\ref{fig:chib:ups2s:mean}).
-In the further analysis this mass was fixed to 10.250\gevcc, which was measured
-in $18 < p_T^{\Y2S} < 40 \gevc$ interval in merged 2011 and 2012 data, and the
+In the following analysis this mass was fixed to 10.250\gevcc, which was measured
+in the $18 < p_T^{\Y2S} < 40 \gevc$ interval on the sum of 2011 and 2012 datasets, and the
 systematic uncertainty on the results due to this assumption has been
 determined.
 
@@ -285,7 +289,7 @@ shown in Figure~\ref{fig:chib:ups2s:mean}.
 
 %% ===========================================================================
 \subsection{\texorpdfstring{\chib}{xb} yields in
-	\texorpdfstring{$\chib \to \Y3S \gamma$}{xb --> Y(3S) gamma} decays}
+    \texorpdfstring{$\chib \to \Y3S \gamma$}{xb --> Y(3S) gamma} decays}
 \label{sec:chib:ups3s:fit}
 
 The fit was performed in the mass interval from  10.440 to 10.760 \gevcc. 
@@ -305,21 +309,19 @@ A good resolution on the \chiboneThreeP mass is observed, so this decay can be
 used for \chiboneThreeP mass estimation. \Cref{fig:chib-3s:m3p} shows how the
 measured \chiboneThreeP mass depends on the \chiboneThreeP and \chibtwoThreeP
 yields ratio ($\lambda$ parameter), which is unknown~(\Cref{sec:ratio}).
-Therefore, it could be stated that the \chiboneThreeP mass is $10{,}508 \pm
-2\stat \pm 8\syst \mevc$. This result is in agreement with the recent
-unpublished
-\lhcb study with converted photons where the \chiboneThreeP mass is
-$10{,}510 \pm 3\stat{}^{+4.4}_{-3.4}\syst$. The difference with
-$\chi_{b1,2}(3P)$ mass barycenter reported by \atlas~\cite{Aad:2011ih} ($10{,}530 \pm 5\stat
+The \chiboneThreeP mass is measured to be $10{,}508 \pm
+2\stat \pm 8\syst \mevc$, where the combined 2011 and 2012 datasets are used, 
+the central value has been obtained by setting $\lambda = 0.5$ in the fit and the 
+systematic error takes into account the uncertainties on  
+the $\lambda$ parameter and the mass difference between \chiboneThreeP and \chibtwoThreeP. 
+This result is in agreement with a recent unpublished
+\lhcb study with converted photons, where the \chiboneThreeP mass is
+$10{,}510 \pm 3\stat{}^{+4.4}_{-3.4}\syst$. This result is also compatible within~$\sim{}1.5\sigma$ with 
+the $\chi_{b1,2}(3P)$ mass barycenter reported by \atlas~\cite{Aad:2011ih} ($10{,}530 \pm 5\stat
 \pm 17\syst \mevcc$) and D0~\cite{Abazov:2012gh}  ($10{,}551 \pm 14\syst \pm 17\stat$)
-is~$\sim{}1.5\sigma$.
 
 
 \input{pics/chib/ups3s_m3p}
-
-In this study the mass was fixed to 10.508 \gevcc which was measured 
-on combined 2011 and 2012 data with $\lambda$ fixed to 0.5 in the fit.
-
 \input{pics/chib/ups3s_nominal}
 
 
