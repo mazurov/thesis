@@ -10,50 +10,52 @@ The pre-selected event candidates were taken from datasets dedicated to
 quarkonia studies in \lhcb. The selection starts by forming candidates from
 pairs of oppositely-charged tracks identified as muons and originated from a
 common vertex. Good track quality is ensured by requiring a $\chisq$ per number
-of degree of freedom ($\chisq/\rm{ndf}$) to be less then 4 for the track fit
+of degrees of freedom ($\chisq/\rm{ndf}$) to be less then 4 for the track fit
 and primary vertex probability greater than 0.5 \%. The muons were required to
 have a transverse momentum higher than 1 \gevc. To suppress duplicate tracks a
 cut on the Kullback-Leibler~\cite{Needham:1082460} (KL) distance was used: only
 tracks with symmetrized KL distance less than 5000 were selected\footnote{The
 KL distance measures the difference between PDFs that describe track
 parameters. If the distance is small then two tracks are likely to be
-clones.}.The primary vertex of dimuon candidate is required to be within
-luminous region defined as $|z_{PV}| < 0.5 m$ and $x_{PV}^2 + y_{PV}^2 < 100
-mm^2$.
+clones.}.The primary vertex of the dimuon candidate is required to be within the 
+luminous region, defined as $|z_{PV}| < 0.5 m$ and $x_{PV}^2 + y_{PV}^2 < 100
+mm^2$, where $z$ is the beam axis, $x$ and $y$ are the horizontal and vertical directions 
+in the plane perpendicular to the beam axis.  
 %============================================================================
 \subsubsection{Trigger}
 \label{sec:upsilon:selection:trigger}
 
-For $\Upsilon$ studies the event candidates  were required to trigger by three
-trigger levels ('TOS' requirement). The first level is L0DiMuon which  requires
-two muon candidates with their $p_T$ product larger than 1.68$\gev^2/c^2$ and
-a relaxed SPD requirement (less than 9000 SPD hits).
+For $\Upsilon$ studies the event candidates should pass three
+trigger levels, with the specific requirement that the muon pair fires the 
+trigger ('Trigger-on-Signal', or 'TOS' requirement). The first level ('L0DiMuon') requires
+the product of the $p_T$ of the two muon candidates to be greater than 1.68$\gev^2/c^2$, and
+a loose requirement on the number of hits in the SPD for the whole event (less than 9000 hits).
 
-The second level is HLT1 trigger where the event candidates were required to
+The second level is the HLT1 trigger, where the event candidates were required to
 pass the Hlt1DiMuonHighMass line.
 This line triggers events with  two well reconstructed tracks  which have hits
-in the muon system  that have a transverse momentum higher that 500\mevc and 
-a total momentum higher than 6\gevc that produced from a common vertex with
-an invariant mass higher than 2.7\gevcc.
+in the muon system  that have a transverse momentum greater than 500\mevc,  
+a momentum greater than 6\gevc, which are originating from a common vertex with
+an invariant mass greater than 2.7\gevcc.
 
 At the last HLT2 level the event needs to be accepted by the HLT2DiMuonB line.
-This line confirms the HLT1 decision and requires the invariant mass of the
-dimuon pair to be larger than 4.7\gevcc.
+This line confirms the HLT1 decision by using better reconstructed tracks, 
+and requires the invariant mass of the dimuon pair to be larger than 4.7\gevcc.
 
 %% ============================================================================
-\subsubsection{This study selection}
+\subsubsection{Selection criteria specific for this study}
 \label{sec:upsilon:selection:study}
 
-To improve the muon identification purity two additional cuts are used. The
+To improve the muon identification purity two additional criteria are used. The
 first one is applied on the difference in logarithm of the likelihood of the
 muon and hadron hypotheses~\cite{Powell} provided by the muon detection system.
 This difference ($\Delta\log\lum^{\mu-\Ph}$) should be greater than 0. The
-second selection  is a cut on the muon probability value obtained from a Neural
-Network algorithm (ProbNN). This algorithm takes in account the various
-reconstruction information such as the RICH particle identification, the muon
-quality reconstruction and compatibility with a minimum ionising particle in the
-calorimeters. In this study selected events requiring to have the ProbNN value
-greater than $0.5$.
+second requires a cut on the muon probability value obtained from a Neural
+Network algorithm (ProbNN). This algorithm takes into account various
+information such as the RICH particle identification criteria, the muon
+reconstruction quality and its compatibility with a minimum ionising particle in the
+calorimeters. In this study a cut on  ProbNN value
+greater than $0.5$ is applied. 
 
 The criteria for  $\Upsilon$ selection are summarized in
 Table~\ref{tab:upsilon:selection:study:summary}.
@@ -63,12 +65,12 @@ Table~\ref{tab:upsilon:selection:study:summary}.
 %% ============================================================================
 \subsection{Fit model}
 \label{sec:upsilon:fit}
-All  fits in this study performed with the RooFit package\cite{roofit}.
-To determine the $\Upsilon$ meson signal yields, an unbinned maximum likelihood
-fit to dimuon mass distribution has been performed. The signals have been
+All  fits in this study are performed with the RooFit package\cite{roofit}.
+To determine the yields of $\Upsilon$ mesons, an unbinned maximum likelihood
+fit to the dimuon mass distribution has been performed. The signals have been
 modeled with the sum of three double-sided CrystalBall (DSCB) functions and the
 combinatorial background by an exponential function with floating $\tau$
-parameter. Each of the DSCB functions corresponds to \Y1S, \Y2S and \Y3S
+parameter. Each DSCB function corresponds to the \Y1S, \Y2S and \Y3S
 signals and can be written in the following form:
 
 \begin{equation}
@@ -81,14 +83,16 @@ DSCB(x) = N \times
 \label{eq:dcb}
 \end{equation}
 
-The double-sided CrystalBall is similar to gaussian
-distribution, but has an asymmetric tails. This function has seven parameters:
-N, $\mu$, $\sigma$, $\alpha_L$, $n_L$, $\alpha_R$, $n_R$ where parameters $\mu$
+The double-sided CrystalBall is similar to a gaussian
+distribution, but has asymmetric tails. This function has seven parameters:
+the number of events N, $\mu$, $\sigma$, $\alpha_L$, $n_L$, $\alpha_R$, $n_R$ where parameters $\mu$
 and $\sigma$ have the same meaning as for gaussian. Parameters $\alpha_L
 (\alpha_R)$ and $n_L (n_R)$ describe the left (right) tail behavior:
 $\alpha_{L,R}$ controls the tail start and $n_{L,R}$ corresponds to the
-decreasing power of the tail. All five parameters $N$, $\alpha_L$, $n_L$,
-$\alpha_R$ and $n_R$ contribute to the amplitude.
+decreasing power of the tail. 
+
+%% %CONCEZIO WHATS THIS? All five parameters $N$, $\alpha_L$, $n_L$,
+%% %                                                 $\alpha_R$ and $n_R$ contribute to the amplitude.
 
 % The mass of \Y1S is allowed to vary. Mass of \Y2S (\Y3S) are defined as sum of
 % \Y1S mass and the value of corresponding difference between mass of
@@ -101,20 +105,19 @@ $\alpha_R$ and $n_R$ contribute to the amplitude.
 % the width of the \Y1S signal, scaled by the ratio of the masses of \Y2S and \Y3S
 % to the \Y1S meson.
 
-The  $\alpha_{L,R}$ and $n_{L,R}$ parameters are fixed to the values extracted
+In all DSCB functions, the  $\alpha_{L,R}$ and $n_{L,R}$ parameters are fixed to the values extracted
 from fits to the simulated $\Upsilon \to \mumu$ decays. The $\alpha_L$ and
-$\alpha_R$ values are fixed to 1.6. The values of $n_L$  and $n_R$ are fixed
-correspondingly to 2 and 11 in each of three double-sided CrystalBall
-functions. All other parameters are allowed to vary in the fit model.
+$\alpha_R$ values are fixed to 1.6, while values of $n_L$  and $n_R$ are fixed
+to 2 and 11 respectively. All other parameters are allowed to vary in the fit model.
 
 %% ============================================================================
 \subsection{Fit results}
 \label{sec:upsilon:result}
 
-Figure~\ref{fig:upsilon:result:nominal} presents the result of the fit that is
-described in the previous section. Fit was performed in the dimuon
+Figure~\ref{fig:upsilon:result:nominal} presents the result of the fit 
+described in the previous section. The fit was performed in the dimuon
 transverse momentum interval $ 6 < p_T^{\mumu} < 40 \gevc$.
-Table~\ref{tab:upsilon:result:nominal} shows the parameters values of this fit.
+Table~\ref{tab:upsilon:result:nominal} shows the obtained parameters values. 
 
 \input{pics/upsilon/result_nominal}
 \input{tables/upsilon/result_nominal}
@@ -132,8 +135,8 @@ mass differs by 3 $\pm$ 2 \mevcc from the PDG value $9460.30 \pm  0.26$ \mevcc a
 varies as a function of transverse momentum, as also observed in other
 studies~\cite{Aaij:2013yaa}. A systematic uncertainty is assigned due to this
 effect. To obtain the final numbers for $\Upsilon$ yields the fit was repeated
-independently for each of the $p_T^{\mumu}$ bins with the \OneS mass fixed to
-$9.456 \gevcc$ that was measured in the fit of joined 2011 and 2012 datasets.
+independently for each $p_T^{\mumu}$ bin with the \OneS mass fixed to
+$9.456 \gevcc$ that was measured in the fit of the joined 2011 and 2012 datasets.
 
 Figure~\ref{fig:upsilon:result:yields} shows the number of signal events as
 function of dimuon transverse momentum. Table~\ref{tab:upsilon:result:fits} in
