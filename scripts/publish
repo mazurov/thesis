@@ -1,6 +1,12 @@
 #!/bin/sh
-TARGET="/afs/cern.ch/user/a/amazurov/www"
+VERSION=$(cat ./VERSION)
+NAME="mazurov-thesis-${VERSION}.pdf"
+
 SOURCE="./build/mazurov-thesis.pdf"
-cp $SOURCE $TARGET
-echo "File '$SOURCE' copied to '$TARGET'"
-echo "Url: http://cern.ch/amazurov/mazurov-thesis.pdf"
+TARGET_WWW="/afs/cern.ch/user/a/amazurov/www/${NAME}"
+TARGET_LOCAL="./build/${NAME}"
+cp $SOURCE $TARGET_LOCAL
+echo "File '$SOURCE' copied to '$TARGET_LOCAL'"
+cp $SOURCE $TARGET_WWW
+echo "File '$SOURCE' copied to '$TARGET_WWW'"
+echo "Url: http://cern.ch/amazurov/${NAME}"
