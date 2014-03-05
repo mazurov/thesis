@@ -31,7 +31,7 @@ of calorimetric variables which are sensitive to photons, by computing likelihoo
 hypotheses, and taking   
 the ratio of the likelihood for a photon hypothesis divided by the sum of likelihoods for all hypotheses. 
 
-The criteria for event selection with a reconstructed photon is summarized in
+The criteria for event selection with a reconstructed photon are summarized in
 Table~\ref{tab:chib:selection:photons}:
 
 \input{tables/chib/selection_photons}
@@ -41,7 +41,7 @@ applied as shown in Table~\ref{tab:chib:selection:window}:
 
 \input{tables/chib/selection_window}
 
-To avoid \Y2S and \Y3S contamination, the mass ranges of the \Y2S and \Y3S are
+To avoid \Y2S and \Y3S mixing contamination, the mass ranges of the \Y2S and \Y3S are
 asymmetric with respect to the nominal masses.
 
 The $\Upsilon$ selection cuts
@@ -147,14 +147,14 @@ mass difference which is fixed in the fit; $\Delta
 m_{\chi_{b1,2}(3P)}^{theory}$ is fixed to the theoretical predicted mass
 difference in 12\mevcc~\cite{Motyka:1997di}. The $\lambda$ parameter depends on
 the $p_T(\Upsilon)$ range and is fixed to the value that is based on the
-theoretical prediction discussed in Section~\ref{sec:ratio}. The parameter $k$ 
+theoretical prediction discussed in Section~\ref{sec:ratio}. The parameter $k$
 is the ratio between the resolution of $\chi_{b1}$ and $\chi_{b2}$ signals.
-This parameter is equal to $1.05$ for $\chi_{b1,2}(1P)$ signals and equal to 1
-for $\chi_{b1,2}(2,3P)$ signals.
+This parameter is obtained from simulation, and is fixed to $1.05$ for
+$\chi_{b1,2}(1P)$ signals and fixed to 1 for $\chi_{b1,2}(2,3P)$ signals.
 
-The width of each CB function ($\sigma$) is fixed to the value obtained
-from simulation~(Section~\ref{sec:mc}), in order to improve fit convergence 
-and reduce uncertainties. 
+The width of each CB function ($\sigma$) is fixed to the value obtained from
+simulation~(Section~\ref{sec:mc}) in each transverse momentum bin, in order to
+improve fit convergence and reduce uncertainties.
 
 As already mentioned in the introduction (\Cref{sec:introduction}), the \chibThreeP  was
 recently observed, but the mass of this meson was not precisely measured. 
@@ -223,7 +223,9 @@ normalized by bin size and luminosity are shown in
 are smoothly decreasing functions of $p_T^{\Y1S}$, as expected. Differences between 7 and 8\tev
 data, due to different production cross sections, can be seen for the
 $\chi_b(1P)$ state, while they are washed out by statistical fluctuations for
-the other states. \Cref{tab:chib:ups1s:fits} in Appendix summarizes the
+the other states. The unexpected difference for $\chibTwoP$ yields in the lowest
+$p_T$ bin is due to insufficient fit in this region (see~\Cref{fig:chib:ups1s:fits2011,fig:chib:ups1s:fits2012}).
+\Cref{tab:chib:ups1s:fits} in Appendix summarizes the
 obtained results.
 
 \input{pics/chib/ups1s_yields}
@@ -251,8 +253,8 @@ The \chiboneThreeP peak width is fixed to \chiboneTwoP peak width scaled by
 1.65, as observed on simulation. 
 
 
-The order of the background polynomial in~\Cref{eq:bernstein} is 3 for all
-intervals of \Y2S transverse momentum.
+A third order polynomial for the background (described in \Cref{eq:bernstein}) is used 
+for all intervals of \Y2S transverse momentum.
 
 
 \Cref{fig:chib:ups2s:nominal} shows the mass distribution in the transverse
@@ -293,7 +295,7 @@ shown in Figure~\ref{fig:chib:ups2s:mean}.
 \label{sec:chib:ups3s:fit}
 
 The fit was performed in the mass interval from  10.440 to 10.760 \gevcc. 
-The order of the background polynomial in \Cref{eq:bernstein} is 2.
+A second order polynomial for the background (described in Equation 5.3) is used.
 Due to the large fluctuations in the background, the
 parameters of this component were fixed.
 

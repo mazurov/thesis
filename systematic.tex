@@ -6,18 +6,33 @@ originating from $\chi_b$ decays, most systematic uncertainties cancel in the
 ratio and only residual effects need to be taken into account. Systematic
 uncertainties can be grouped according to their contribution to the terms
 of~\Cref{eqn:master}. Systematic uncertainties on the event yields are mostly
-due to models used to fit the $\Upsilon$ and $\chi_b$ invariant masses, while the
-ones on the efficiency are due to the photon reconstruction and the unknown
-initial polarization of $\chi_b$ and $\Upsilon$ particles. The systematic uncertainties due to 
-polarization of inclusive $\Upsilon$ mesons are considered to be
-small~\cite{Aaij:2013yaa,Aaij:2014nwa}.
+due to models used to fit the $\Upsilon$ and $\chi_b$ invariant masses, while
+the ones on the efficiency are due to the photon reconstruction and the unknown
+initial polarization of $\chi_b$ and $\Upsilon$ particles. Since the $\Upsilon$
+polarization is expected to be small~\cite{Aaij:2013yaa,Aaij:2014nwa}, the
+uncertainties associated with the unpolarised assumption can be ignored. 
  
 
 \subsection{Uncertainties related to the fit model}
 
+In the $\chi_b$ fits, the resolution of the CrystalBall functions, determined
+from simulation, has been scaled by a factor 1.17 in order to account for data
+--- MonteCarlo differences. This factor was obtained by fitting a histogram,
+that stores the ratio between data and MonteCarlo resolution, by a constant
+function. The result of fit is shown in~\Cref{fig:syst:ratio_data_mc_sigma}.
+ 
+% \input{pics/syst/data_sigma}
+\input{pics/syst/ratio_data_mc_sigma}
+
+We estimate the systematic uncertainty due to this assumption by repeating the
+fits by changing the $\sigma$ parameter within the maximum and minimum values of
+the scaling factor obtained from the fit in Figure~\ref{fig:syst:ratio_data_mc_sigma}.
+Results are shown in Table~\ref{tab:syst:sigma_ups1s}.
+
+
 The uncertainty related to the modeling of the $\Upsilon$ invariant mass
-distribution has been estimated by following previous
-studies~\cite{Aaij:2013yaa}. An uncertainty of 0.7\% has been assigned to the
+distribution has been estimated by the previous
+study~\cite{Aaij:2013yaa}. An uncertainty of 0.7\% has been assigned to the
 yields of $\Upsilon(nS)$ mesons.
 
 In the fit model of the $\chi_b$ invariant masses, several sources need to be
@@ -27,7 +42,7 @@ theory, is varied from 0.3 to 0.7 as it was discussed in~\Cref{sec:ratio}.
 
 
 Tables~\ref{tab:syst:lambda_ups1s},\ref{tab:syst:lambda_ups2s} and
-\ref{tab:syst:lambda_ups3s} report the relative variation in percent of the
+\ref{tab:syst:lambda_ups3s} report the relative variation in percentage of the
 $\chi_b$ yields as function of $\lambda$, the relative proportion of the two
 $\chi_b$ states, for all examined decays, in each bin of transverse momentum
 for $\chi_b$ decays into $\Upsilon(1S)$, $\Upsilon(2S)$ and $\Upsilon(3S)$,
@@ -45,21 +60,8 @@ decays into $\Upsilon(1S)$, $\Upsilon(2S)$ and $\Upsilon(3S)$, respectively.
 Systematic uncertainties due to parameters taken from PDG (e.g. mass differences)
 are negligible.
  
-\subsubsection{Uncertainties related to Data-MonteCarlo differences in invariant mass resolution}
+% \subsubsection{Uncertainties related to Data-MonteCarlo differences in invariant mass resolution}
  
-In the $\chi_b$ fits, the resolution of the CrystalBall functions, determined
-from simulation, has been scaled by a factor 1.17 in order to account for data
---- MonteCarlo differences. This factor was obtained by fitting a histogram,
-that stores the ratio between data and MonteCarlo resolution, by a constant
-function. The result of fit is shown in~\Cref{fig:syst:ratio_data_mc_sigma}.
- 
-% \input{pics/syst/data_sigma}
-\input{pics/syst/ratio_data_mc_sigma}
-
-We estimate the systematic uncertainty due to this assumption by repeating the
-fits by changing the $\sigma$ parameter within the maximum and minimum values of
-the scaling factor obtained from the fit in Figure~\ref{fig:syst:ratio_data_mc_sigma}.
-Results are shown in Table~\ref{tab:syst:sigma_ups1s}.
 
 
 
@@ -70,12 +72,14 @@ Results are shown in Table~\ref{tab:syst:sigma_ups1s}.
 \subsection{Photon reconstruction efficiency}
 The photon reconstruction efficiency, taken from simulation, needs not to be
 the same as in real data. The detailed comparison between MonteCarlo and data,
-presented in Section~\ref{sec:mc:datavsmc}, shows that the differences
-are small. We assign a systematic uncertainty based on previous studies of
-photon reconstruction efficiencies. These studies compare the
+presented in Section~\ref{sec:mc:datavsmc}, shows that the differences are
+small. We assign a systematic uncertainty based on previous studies of photon
+reconstruction efficiencies~\cite{Belyaev:1411344}. These studies compare the
 $B^+ \to \jpsi K^{*+}$ and $B^+ \to \jpsi K^+$ yields in data and MonteCarlo in
 order to determine the neutral pion, hence the photon  reconstruction
-efficiency. A systematic uncertainty of 3\% is assigned to this effect.
+efficiency. The comparison was provided for a wide $p_T(\gamma)$ range, therefore
+the result can be applied in this study. A systematic uncertainty of 3\%
+is assigned to this effect.
 
 
 \subsection{\texorpdfstring{\chib}{chib} polarization}
