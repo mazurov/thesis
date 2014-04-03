@@ -3,7 +3,8 @@ VERSION=$(cat ./VERSION)
 NAME="mazurov-thesis-${VERSION}.pdf"
 
 SOURCE="./build/mazurov-thesis.pdf"
-TARGET_WWW="/afs/cern.ch/user/a/amazurov/www/${NAME}"
+# TARGET_WWW="/afs/cern.ch/user/a/amazurov/www/${NAME}"
+TARGET_WWW="H:/www/${NAME}"
 TARGET_LOCAL="./build/${NAME}"
 cp $SOURCE $TARGET_LOCAL
 echo "File '$SOURCE' copied to '$TARGET_LOCAL'"

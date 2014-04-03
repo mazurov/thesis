@@ -11,9 +11,17 @@
 			"working_dir": "${project_path}",
 			"variants": [
 			        { "cmd": ["xdg-open build/mazurov-thesis.pdf&"],
-			          "name": "Run"
+			          "name": "Run",
+			          "windows":
+    					{
+        					"cmd": ["start","build/mazurov-thesis.pdf"]
+    					}
 			        }
-			  ]
+			  ],
+			"windows":
+    		{
+        		"cmd": ["cmd","/c","${project_path}/scripts/bootstrap.bat"]
+    		}
 		}
 	],
 	"folders":

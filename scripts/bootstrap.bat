@@ -1,4 +1,1 @@
-#!/bin/sh
-
 latexmk -jobname=mazurov-thesis -pdf --outdir=build  main.tex
-#&& evince build/chib_note.pdf&
